@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b387c1de94de6f4b9466c4e2db0b6d85 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b387c1de94de6f4b9466c4e2db0b6d85" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b387c1de94de6f4b9466c4e2db0b6d85 = L.map(
+                "map_b387c1de94de6f4b9466c4e2db0b6d85",
+                {
+                    center: [40.80812944674559, -73.93138854800166],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    attributionControl: true,
+                    dragging: false,
+                    scrollWheelZoom: false,
+                    fullscreenControl: false,
+                    drawExport: false,
+                    layersControl: true,
+                }
+            );
+            L.control.scale().addTo(map_b387c1de94de6f4b9466c4e2db0b6d85);
+
+            
+
+        
+    
+            var tile_layer_9ae4a02a03f2d8bb5be6e577711bde95 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_9ae4a02a03f2d8bb5be6e577711bde95.addTo(map_b387c1de94de6f4b9466c4e2db0b6d85);
+        
+    
+            var options = {
+              position: "topleft",
+              draw: {},
+              edit: {},
+            }
+            // FeatureGroup is to store editable layers.
+            var drawnItems_draw_control_67689ac233f5c071f3a99cb15e405f6e = new L.featureGroup().addTo(
+                map_b387c1de94de6f4b9466c4e2db0b6d85
+            );
+            options.edit.featureGroup = drawnItems_draw_control_67689ac233f5c071f3a99cb15e405f6e;
+            var draw_control_67689ac233f5c071f3a99cb15e405f6e = new L.Control.Draw(
+                options
+            ).addTo( map_b387c1de94de6f4b9466c4e2db0b6d85 );
+            map_b387c1de94de6f4b9466c4e2db0b6d85.on(L.Draw.Event.CREATED, function(e) {
+                var layer = e.layer,
+                    type = e.layerType;
+                var coords = JSON.stringify(layer.toGeoJSON());
+                layer.on('click', function() {
+                    alert(coords);
+                    console.log(coords);
+                });
+                drawnItems_draw_control_67689ac233f5c071f3a99cb15e405f6e.addLayer(layer);
+             });
+            map_b387c1de94de6f4b9466c4e2db0b6d85.on('draw:created', function(e) {
+                drawnItems_draw_control_67689ac233f5c071f3a99cb15e405f6e.addLayer(e.layer);
+            });
+            
+        
+    
+            var measure_control_7d4e16f15451a25895afb2440f1ca913 = new L.Control.Measure(
+                {"position": "bottomleft", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_b387c1de94de6f4b9466c4e2db0b6d85.addControl(measure_control_7d4e16f15451a25895afb2440f1ca913);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+    
+
+            var geocoderOpts_geocoder_4d54fc7363312d83331ec082fa80c0e8 = {"collapsed": true, "defaultMarkGeocode": true, "position": "topleft", "provider": "nominatim", "providerOptions": {}, "zoom": 11};
+
+            // note: geocoder name should start with lowercase
+            var geocoderName_geocoder_4d54fc7363312d83331ec082fa80c0e8 = geocoderOpts_geocoder_4d54fc7363312d83331ec082fa80c0e8["provider"];
+
+            var customGeocoder_geocoder_4d54fc7363312d83331ec082fa80c0e8 = L.Control.Geocoder[ geocoderName_geocoder_4d54fc7363312d83331ec082fa80c0e8 ](
+                geocoderOpts_geocoder_4d54fc7363312d83331ec082fa80c0e8['providerOptions']
+            );
+            geocoderOpts_geocoder_4d54fc7363312d83331ec082fa80c0e8["geocoder"] = customGeocoder_geocoder_4d54fc7363312d83331ec082fa80c0e8;
+
+            L.Control.geocoder(
+                geocoderOpts_geocoder_4d54fc7363312d83331ec082fa80c0e8
+            ).on('markgeocode', function(e) {
+                var zoom = geocoderOpts_geocoder_4d54fc7363312d83331ec082fa80c0e8['zoom'] || map_b387c1de94de6f4b9466c4e2db0b6d85.getZoom();
+                map_b387c1de94de6f4b9466c4e2db0b6d85.setView(e.geocode.center, zoom);
+            }).addTo(map_b387c1de94de6f4b9466c4e2db0b6d85);
+
+        
+    
+            map_b387c1de94de6f4b9466c4e2db0b6d85.fitBounds(
+                [[40.80812944674559, -73.93138854800166], [40.80812944674559, -73.93138854800166]],
+                {"maxZoom": 12}
+            );
+        
+    
+        function geo_json_f01e2e1631e59b324c505bbed7843007_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fill_color": "#ADD8E6", "weight": 2};
+            }
+        }
+        function geo_json_f01e2e1631e59b324c505bbed7843007_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0, "weight": 4};
+            }
+        }
+
+        function geo_json_f01e2e1631e59b324c505bbed7843007_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_f01e2e1631e59b324c505bbed7843007.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_f01e2e1631e59b324c505bbed7843007_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_f01e2e1631e59b324c505bbed7843007 = L.geoJson(null, {
+                onEachFeature: geo_json_f01e2e1631e59b324c505bbed7843007_onEachFeature,
+            
+                style: geo_json_f01e2e1631e59b324c505bbed7843007_styler,
+        });
+
+        function geo_json_f01e2e1631e59b324c505bbed7843007_add (data) {
+            geo_json_f01e2e1631e59b324c505bbed7843007
+                .addData(data);
+        }
+            geo_json_f01e2e1631e59b324c505bbed7843007_add({"bbox": [-73.93241188143645, 40.806729655238186, -73.9297912905231, 40.80924247354858], "features": [{"bbox": [-73.93161263981195, 40.806729655238186, -73.9297912905231, 40.80811761107545], "geometry": {"coordinates": [[[[-73.93069026611705, 40.8069712649998], [-73.9307909966337, 40.80691596375819], [-73.9308563590513, 40.8069847598076], [-73.93135660338021, 40.80754093618284], [-73.93137295644692, 40.807543711402], [-73.93161263981195, 40.80781389362354], [-73.93091335137036, 40.80811761107545], [-73.9297912905231, 40.80764322370122], [-73.93046052051398, 40.806729655238186], [-73.93069026611705, 40.8069712649998]]]], "type": "MultiPolygon"}, "id": "0", "properties": {"APPBBL": 2023160001.0, "APPDate": "07/11/2018", "Address": "101 LINCOLN AVENUE", "AreaSource": "2", "AssessLand": 1436850.0, "AssessTot": 71631900.0, "BBL": 2023160001.0, "BCT2020": "2001901", "BCTCB2020": "20019011014", "BldgArea": 973381, "BldgClass": "D6", "BldgDepth": 333.0, "BldgFront": 381.5, "Block": 2316, "BoroCode": 2, "Borough": "BX", "BsmtCode": "0", "BuiltFAR": 7.62, "CB2010": "4009", "CD": 201, "CT2010": "19", "ComArea": 110869, "CommFAR": 5.0, "CondoNo": 0, "Council": 8, "DCPEdited": null, "EDesigNum": "E-143", "Easements": 0, "ExemptTot": 0.0, "Ext": null, "FIRM07_FLA": "1", "FacilFAR": 6.5, "FactryArea": 0, "FireComp": "E060", "GarageArea": 80831, "HealthArea": 4700, "HealthCent": 23, "HistDist": null, "IrrLotCode": "Y", "LandUse": "04", "Landmark": null, "Latitude": 40.8075091, "Longitude": -73.9306804, "Lot": 1, "LotArea": 127721, "LotDepth": 430.0, "LotFront": 333.08, "LotType": "1", "LtdHeight": null, "Notes": null, "NumBldgs": 1, "NumFloors": 25.0, "OfficeArea": 1000, "OtherArea": 0, "Overlay1": null, "Overlay2": null, "OwnerName": "BOP 101 LINCOLN AVENUE LLC", "OwnerType": null, "PFIRM15_FL": "1", "PLUTOMapID": "1", "PolicePrct": 40, "ProxCode": "1", "ResArea": 862512, "ResidFAR": 6.02, "RetailArea": 13396, "SPDist1": "HRW", "SPDist2": null, "SPDist3": null, "Sanborn": "209S004", "SanitDistr": "01", "SanitSub": "1A", "Sanitboro": "2", "SchoolDist": "07", "Shape_Area": 128967.549653, "Shape_Leng": 0.0, "SplitZone": "N", "StrgeArea": 15642, "TaxMap": "20902", "Tract2010": "0019", "UnitsRes": 921, "UnitsTotal": 926, "Version": "24v3.1", "XCoord": 1003440, "YCoord": 233482, "YearAlter1": 2020, "YearAlter2": 0, "YearBuilt": 2020, "ZMCode": null, "ZipCode": 10454, "ZoneDist1": "M1-3/R8", "ZoneDist2": null, "ZoneDist3": null, "ZoneDist4": null, "ZoneMap": "6a"}, "type": "Feature"}, {"bbox": [-73.93241188143645, 40.80806176738551, -73.93135321685965, 40.80924247354858], "geometry": {"coordinates": [[[[-73.93170553455819, 40.808680755999625], [-73.93182663852367, 40.80859083009355], [-73.93166709150697, 40.808467603614496], [-73.93168344818531, 40.808455616898456], [-73.93165577449187, 40.80843424241119], [-73.93163941671219, 40.808446230042776], [-73.93159608548655, 40.80841276235573], [-73.93154290300062, 40.808371685887195], [-73.93135321685965, 40.80822517746396], [-73.93167717214642, 40.80811337805332], [-73.93175290434267, 40.80808724197832], [-73.93182672066341, 40.80806176738551], [-73.93207973272344, 40.8084698132144], [-73.93212316552555, 40.80845383431221], [-73.93241188143645, 40.80889893805451], [-73.93236874283572, 40.808931924969514], [-73.93237753362143, 40.80896408158843], [-73.93237928350602, 40.808970485166405], [-73.93233495133177, 40.809002256628965], [-73.9323137654905, 40.80901744006642], [-73.93201377821396, 40.80924247354858], [-73.93195219176582, 40.80919475918948], [-73.93187014088647, 40.80913119022551], [-73.93175709328536, 40.80904360439009], [-73.93175802560349, 40.80904290253768], [-73.93149237448901, 40.808839040510414], [-73.93170553455819, 40.808680755999625]]]], "type": "MultiPolygon"}, "id": "1", "properties": {"APPBBL": 2023190002.0000002, "APPDate": "12/15/1997", "Address": "2401 3 AVENUE", "AreaSource": "2", "AssessLand": 904500.0, "AssessTot": 37445400.0, "BBL": 2023190002.0000002, "BCT2020": "2005100", "BCTCB2020": "20051001014", "BldgArea": 448890, "BldgClass": "D6", "BldgDepth": 0.0, "BldgFront": 0.0, "Block": 2319, "BoroCode": 2, "Borough": "BX", "BsmtCode": "0", "BuiltFAR": 6.7, "CB2010": "1026", "CD": 201, "CT2010": "51", "ComArea": 33167, "CommFAR": 5.0, "CondoNo": 0, "Council": 8, "DCPEdited": null, "EDesigNum": "E-143", "Easements": 0, "ExemptTot": 0.0, "Ext": null, "FIRM07_FLA": "1", "FacilFAR": 6.5, "FactryArea": 0, "FireComp": "E060", "GarageArea": 28474, "HealthArea": 3800, "HealthCent": 23, "HistDist": null, "IrrLotCode": "Y", "LandUse": "04", "Landmark": null, "Latitude": 40.8086736, "Longitude": -73.9319146, "Lot": 2, "LotArea": 67000, "LotDepth": 395.0, "LotFront": 159.46, "LotType": "3", "LtdHeight": null, "Notes": null, "NumBldgs": 1, "NumFloors": 25.0, "OfficeArea": 3098, "OtherArea": 0, "Overlay1": null, "Overlay2": null, "OwnerName": "BOP 2401 THIRD AVENUE OWNER LLC", "OwnerType": null, "PFIRM15_FL": "1", "PLUTOMapID": "1", "PolicePrct": 40, "ProxCode": "1", "ResArea": 415723, "ResidFAR": 6.02, "RetailArea": 1595, "SPDist1": "HRW", "SPDist2": null, "SPDist3": null, "Sanborn": "29S 001", "SanitDistr": "01", "SanitSub": "1A", "Sanitboro": "2", "SchoolDist": "07", "Shape_Area": 58390.29029, "Shape_Leng": 0.0, "SplitZone": "N", "StrgeArea": 0, "TaxMap": "20902", "Tract2010": "0051", "UnitsRes": 370, "UnitsTotal": 373, "Version": "24v3.1", "XCoord": 1003098, "YCoord": 233906, "YearAlter1": 2019, "YearAlter2": 0, "YearBuilt": 2019, "ZMCode": null, "ZipCode": 10451, "ZoneDist1": "M1-3/R8", "ZoneDist2": null, "ZoneDist3": null, "ZoneDist4": null, "ZoneMap": "6a"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_f01e2e1631e59b324c505bbed7843007.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Borough", "Block", "Lot", "CD", "BCT2020", "BCTCB2020", "CT2010", "CB2010", "SchoolDist", "Council", "ZipCode", "FireComp", "PolicePrct", "HealthCent", "HealthArea", "Sanitboro", "SanitDistr", "SanitSub", "Address", "ZoneDist1", "ZoneDist2", "ZoneDist3", "ZoneDist4", "Overlay1", "Overlay2", "SPDist1", "SPDist2", "SPDist3", "LtdHeight", "SplitZone", "BldgClass", "LandUse", "Easements", "OwnerType", "OwnerName", "LotArea", "BldgArea", "ComArea", "ResArea", "OfficeArea", "RetailArea", "GarageArea", "StrgeArea", "FactryArea", "OtherArea", "AreaSource", "NumBldgs", "NumFloors", "UnitsRes", "UnitsTotal", "LotFront", "LotDepth", "BldgFront", "BldgDepth", "Ext", "ProxCode", "IrrLotCode", "LotType", "BsmtCode", "AssessLand", "AssessTot", "ExemptTot", "YearBuilt", "YearAlter1", "YearAlter2", "HistDist", "Landmark", "BuiltFAR", "ResidFAR", "CommFAR", "FacilFAR", "BoroCode", "BBL", "CondoNo", "Tract2010", "XCoord", "YCoord", "ZoneMap", "ZMCode", "Sanborn", "TaxMap", "EDesigNum", "APPBBL", "APPDate", "PLUTOMapID", "FIRM07_FLA", "PFIRM15_FL", "Version", "DCPEdited", "Latitude", "Longitude", "Notes", "Shape_Leng", "Shape_Area"];
+    let aliases = ["Borough", "Block", "Lot", "CD", "BCT2020", "BCTCB2020", "CT2010", "CB2010", "SchoolDist", "Council", "ZipCode", "FireComp", "PolicePrct", "HealthCent", "HealthArea", "Sanitboro", "SanitDistr", "SanitSub", "Address", "ZoneDist1", "ZoneDist2", "ZoneDist3", "ZoneDist4", "Overlay1", "Overlay2", "SPDist1", "SPDist2", "SPDist3", "LtdHeight", "SplitZone", "BldgClass", "LandUse", "Easements", "OwnerType", "OwnerName", "LotArea", "BldgArea", "ComArea", "ResArea", "OfficeArea", "RetailArea", "GarageArea", "StrgeArea", "FactryArea", "OtherArea", "AreaSource", "NumBldgs", "NumFloors", "UnitsRes", "UnitsTotal", "LotFront", "LotDepth", "BldgFront", "BldgDepth", "Ext", "ProxCode", "IrrLotCode", "LotType", "BsmtCode", "AssessLand", "AssessTot", "ExemptTot", "YearBuilt", "YearAlter1", "YearAlter2", "HistDist", "Landmark", "BuiltFAR", "ResidFAR", "CommFAR", "FacilFAR", "BoroCode", "BBL", "CondoNo", "Tract2010", "XCoord", "YCoord", "ZoneMap", "ZMCode", "Sanborn", "TaxMap", "EDesigNum", "APPBBL", "APPDate", "PLUTOMapID", "FIRM07_FLA", "PFIRM15_FL", "Version", "DCPEdited", "Latitude", "Longitude", "Notes", "Shape_Leng", "Shape_Area"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+            geo_json_f01e2e1631e59b324c505bbed7843007.addTo(map_b387c1de94de6f4b9466c4e2db0b6d85);
+        
+    
+            map_b387c1de94de6f4b9466c4e2db0b6d85.fitBounds(
+                [[40.806729655238186, -73.93241188143645], [40.80924247354858, -73.9297912905231]],
+                {}
+            );
+        
+    
+            var layer_control_2a04dd4122a61936fe2b9bd50b8062c5_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_9ae4a02a03f2d8bb5be6e577711bde95,
+                },
+                overlays :  {
+                    "BanksideLots" : geo_json_f01e2e1631e59b324c505bbed7843007,
+                },
+            };
+            let layer_control_2a04dd4122a61936fe2b9bd50b8062c5 = L.control.layers(
+                layer_control_2a04dd4122a61936fe2b9bd50b8062c5_layers.base_layers,
+                layer_control_2a04dd4122a61936fe2b9bd50b8062c5_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_b387c1de94de6f4b9466c4e2db0b6d85);
+
+        
+</script>
+</html>
