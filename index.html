@@ -1,0 +1,2063 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e12e5c3c6eec7a39413bea7ef3749ed9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+        <style>
+            /* Move the zoom control to the bottom right corner */
+            .leaflet-control-zoom {
+                position: absolute !important;
+                bottom: 10px;
+                right: 10px;
+            }
+        </style>
+    
+    
+            <div class="folium-map" id="map_e12e5c3c6eec7a39413bea7ef3749ed9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e12e5c3c6eec7a39413bea7ef3749ed9 = L.map(
+                "map_e12e5c3c6eec7a39413bea7ef3749ed9",
+                {
+                    center: [40.833592290333335, -73.90671848999999],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+
+            
+
+        
+    
+            var tile_layer_44d9a3b52ff4fb9e40559e20c3352cab = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_44d9a3b52ff4fb9e40559e20c3352cab.addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var marker_1f2872cc859d0edf7488048171d183b0 = L.marker(
+                [40.82622706, -73.90909635],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_329a954452f3e30f004b2e5d8099ef1e = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            4\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_1f2872cc859d0edf7488048171d183b0.setIcon(div_icon_329a954452f3e30f004b2e5d8099ef1e);
+        
+    
+        var popup_e8b5e628d4b2fb6d473e7d0f8204986c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_834cb787db7eacd3924c5410ce4a9b2f = $(`<div id="html_834cb787db7eacd3924c5410ce4a9b2f" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>1010 Washington Ave</h4>     <img src="images/1010WashingtonAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Morrisania</p>     <p style="font-weight: 700;">1010 Washington Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Under Construction</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 4</p> </div> </div>`)[0];
+                popup_e8b5e628d4b2fb6d473e7d0f8204986c.setContent(html_834cb787db7eacd3924c5410ce4a9b2f);
+            
+        
+
+        marker_1f2872cc859d0edf7488048171d183b0.bindPopup(popup_e8b5e628d4b2fb6d473e7d0f8204986c)
+        ;
+
+        
+    
+    
+            marker_1f2872cc859d0edf7488048171d183b0.bindTooltip(
+                `<div>
+                     1010 Washington Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e8527c2f062c76b7a6f41bcecda744f5 = L.marker(
+                [40.8303141, -73.90784158],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_b52672604e81334babeb664b070c1915 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            5\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_e8527c2f062c76b7a6f41bcecda744f5.setIcon(div_icon_b52672604e81334babeb664b070c1915);
+        
+    
+        var popup_94366900faa9e7fa1c50ef6e98290331 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e938334041db934e5d12e5434e8c027e = $(`<div id="html_e938334041db934e5d12e5434e8c027e" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>1169 Washington Ave</h4>     <img src="images/1169WashingtonAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Morrisania</p>     <p style="font-weight: 700;">1169 Washington Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Permits Filed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 5</p> </div> </div>`)[0];
+                popup_94366900faa9e7fa1c50ef6e98290331.setContent(html_e938334041db934e5d12e5434e8c027e);
+            
+        
+
+        marker_e8527c2f062c76b7a6f41bcecda744f5.bindPopup(popup_94366900faa9e7fa1c50ef6e98290331)
+        ;
+
+        
+    
+    
+            marker_e8527c2f062c76b7a6f41bcecda744f5.bindTooltip(
+                `<div>
+                     1169 Washington Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fc58e49195124fb7e17901554fa83350 = L.marker(
+                [40.83652362, -73.92480278],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_3430c251a77ad7029582705e546d5d8a = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            6\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_fc58e49195124fb7e17901554fa83350.setIcon(div_icon_3430c251a77ad7029582705e546d5d8a);
+        
+    
+        var popup_b625aa7926d2d47e6e7af3e35829b984 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6f5c26736ff9b95b7ff24b5d1a1b752d = $(`<div id="html_6f5c26736ff9b95b7ff24b5d1a1b752d" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>1182 Woodycrest Ave</h4>     <img src="images/1182WoodycrestAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Highbridge</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 6</p> </div> </div>`)[0];
+                popup_b625aa7926d2d47e6e7af3e35829b984.setContent(html_6f5c26736ff9b95b7ff24b5d1a1b752d);
+            
+        
+
+        marker_fc58e49195124fb7e17901554fa83350.bindPopup(popup_b625aa7926d2d47e6e7af3e35829b984)
+        ;
+
+        
+    
+    
+            marker_fc58e49195124fb7e17901554fa83350.bindTooltip(
+                `<div>
+                     1182 Woodycrest Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e83a670c1d7f33c7177225070926671e = L.marker(
+                [40.82908169, -73.90873201],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_7c9637097b116cdd08d9baf7482fa757 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            7\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_e83a670c1d7f33c7177225070926671e.setIcon(div_icon_7c9637097b116cdd08d9baf7482fa757);
+        
+    
+        var popup_3d751490f8c6e248b3c447976337ab82 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a0375622e3fbfa863fddc77a55e4cce8 = $(`<div id="html_a0375622e3fbfa863fddc77a55e4cce8" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>12 Governeur Pl</h4>     <img src="images/12GoverneurPl_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Morrisania</p>     <p style="font-weight: 700;">12 Governeur Pl</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Permits Filed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 7</p> </div> </div>`)[0];
+                popup_3d751490f8c6e248b3c447976337ab82.setContent(html_a0375622e3fbfa863fddc77a55e4cce8);
+            
+        
+
+        marker_e83a670c1d7f33c7177225070926671e.bindPopup(popup_3d751490f8c6e248b3c447976337ab82)
+        ;
+
+        
+    
+    
+            marker_e83a670c1d7f33c7177225070926671e.bindTooltip(
+                `<div>
+                     12 Governeur Pl
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cff27930377630edb090ffceb868e639 = L.marker(
+                [40.81673673, -73.92951107],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_4e12f90730862e1fc649d479d4137da5 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            8\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_cff27930377630edb090ffceb868e639.setIcon(div_icon_4e12f90730862e1fc649d479d4137da5);
+        
+    
+        var popup_645d08f21c6017e94259ca691f5967c9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_30fde4d1b7ff791ebe6c81e72548e401 = $(`<div id="html_30fde4d1b7ff791ebe6c81e72548e401" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>120 East 144 St</h4>     <img src="images/120East144St_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Lower Concourse</p>     <p style="font-weight: 700;">120 East 144 St</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">120 E 144 St is an upcoming 13 -story residential building that will bring 470 new apartments to the Lower Concourse area. The development will include a slew of studio, one-bedroom, and 2-bedroom apartment, many of which will feature private terraces.  </p>     <p style="font-weight: 700;">Learn more: <a href="https://housingconnect.nyc.gov/PublicWeb/details/5433" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 8</p> </div> </div>`)[0];
+                popup_645d08f21c6017e94259ca691f5967c9.setContent(html_30fde4d1b7ff791ebe6c81e72548e401);
+            
+        
+
+        marker_cff27930377630edb090ffceb868e639.bindPopup(popup_645d08f21c6017e94259ca691f5967c9)
+        ;
+
+        
+    
+    
+            marker_cff27930377630edb090ffceb868e639.bindTooltip(
+                `<div>
+                     120 East 144 St
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f28767389f752c925eb47c6d557d183d = L.marker(
+                [40.83900297, -73.91951859],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_7c75f8a0dbdb862f8e3d239623209eef = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            9\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_f28767389f752c925eb47c6d557d183d.setIcon(div_icon_7c75f8a0dbdb862f8e3d239623209eef);
+        
+    
+        var popup_bcaebc478917689e45d1576d8cda9a3b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_51a42143114d0e3b6f252ee33c55daaf = $(`<div id="html_51a42143114d0e3b6f252ee33c55daaf" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>1320 Inwood Ave</h4>     <img src="images/1320InwoodAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Mount Eden</p>     <p style="font-weight: 700;">1320 Inwood Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Permits Filed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 9</p> </div> </div>`)[0];
+                popup_bcaebc478917689e45d1576d8cda9a3b.setContent(html_51a42143114d0e3b6f252ee33c55daaf);
+            
+        
+
+        marker_f28767389f752c925eb47c6d557d183d.bindPopup(popup_bcaebc478917689e45d1576d8cda9a3b)
+        ;
+
+        
+    
+    
+            marker_f28767389f752c925eb47c6d557d183d.bindTooltip(
+                `<div>
+                     1320 Inwood Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ccb23c6104c8384780800f71c51d7852 = L.marker(
+                [40.83367933, -73.90195736],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_ec835052c5bf0bc8c0b97e4c8692865d = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            10\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_ccb23c6104c8384780800f71c51d7852.setIcon(div_icon_ec835052c5bf0bc8c0b97e4c8692865d);
+        
+    
+        var popup_7fcde30ae7dd62febaabe5996e1dcc63 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_27211c0aee5d103f08ffb4dde99359c6 = $(`<div id="html_27211c0aee5d103f08ffb4dde99359c6" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>1356 Fulton Ave</h4>     <img src="images/1356FultonAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Morrisania</p>     <p style="font-weight: 700;">1356 Fulton Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Permits Filed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 10</p> </div> </div>`)[0];
+                popup_7fcde30ae7dd62febaabe5996e1dcc63.setContent(html_27211c0aee5d103f08ffb4dde99359c6);
+            
+        
+
+        marker_ccb23c6104c8384780800f71c51d7852.bindPopup(popup_7fcde30ae7dd62febaabe5996e1dcc63)
+        ;
+
+        
+    
+    
+            marker_ccb23c6104c8384780800f71c51d7852.bindTooltip(
+                `<div>
+                     1356 Fulton Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3a71b7ed2f9dbfbf37db5735c895cb01 = L.marker(
+                [40.83062396, -73.88462728],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_75f383d9c994936aea0a7ada2eea4f97 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            11\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_3a71b7ed2f9dbfbf37db5735c895cb01.setIcon(div_icon_75f383d9c994936aea0a7ada2eea4f97);
+        
+    
+        var popup_2d97c60359b688031adcf8bd92bb07ae = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5f9816967946116dcd640d7bdcea1b40 = $(`<div id="html_5f9816967946116dcd640d7bdcea1b40" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>1460-1480 Sheridan Blvd</h4>     <img src="images/1460-1480SheridanBlvd_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Crotona Park East</p>     <p style="font-weight: 700;">1460-1480 Sheridan Blvd</p>     <p style="font-weight: 700;">Mixed-use</p>     <p style="font-weight: 700;">Under Construction</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">1460-1480 Sheridan Expwy is an upcoming three-tower mixed use complex along the newly-pedestrian Sheridan thoroughfare. The complex is set to bring 970 affordable rental units and nearly 140,000 of commercial space online. Once completed, Simon Properties will establish another sorely-needed public access point to the Bronx River waterfront. </p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 11</p> </div> </div>`)[0];
+                popup_2d97c60359b688031adcf8bd92bb07ae.setContent(html_5f9816967946116dcd640d7bdcea1b40);
+            
+        
+
+        marker_3a71b7ed2f9dbfbf37db5735c895cb01.bindPopup(popup_2d97c60359b688031adcf8bd92bb07ae)
+        ;
+
+        
+    
+    
+            marker_3a71b7ed2f9dbfbf37db5735c895cb01.bindTooltip(
+                `<div>
+                     1460-1480 Sheridan Blvd
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8917f1c2840863ef24e4e9b6e181e8e1 = L.marker(
+                [40.83204057, -73.88805301],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_389396fc1f5db43604fa9a9a7564e7ac = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            12\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_8917f1c2840863ef24e4e9b6e181e8e1.setIcon(div_icon_389396fc1f5db43604fa9a9a7564e7ac);
+        
+    
+        var popup_b7ffecf26033c5a3d50c3b5cc86e61e4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ab57871decbc1bdb56cb326852508db8 = $(`<div id="html_ab57871decbc1bdb56cb326852508db8" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>1465 Bryant Ave</h4>     <img src="images/1465BryantAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Crotona Park East</p>     <p style="font-weight: 700;">1465 Bryant Ave</p>     <p style="font-weight: 700;">Mixed-use</p>     <p style="font-weight: 700;">Permits Filed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 12</p> </div> </div>`)[0];
+                popup_b7ffecf26033c5a3d50c3b5cc86e61e4.setContent(html_ab57871decbc1bdb56cb326852508db8);
+            
+        
+
+        marker_8917f1c2840863ef24e4e9b6e181e8e1.bindPopup(popup_b7ffecf26033c5a3d50c3b5cc86e61e4)
+        ;
+
+        
+    
+    
+            marker_8917f1c2840863ef24e4e9b6e181e8e1.bindTooltip(
+                `<div>
+                     1465 Bryant Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8281d715e80fd8b19419af344d32949f = L.marker(
+                [40.88588544, -73.89867281],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_48668c46de325c9f8381e323c3dc368b = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            13\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_8281d715e80fd8b19419af344d32949f.setIcon(div_icon_48668c46de325c9f8381e323c3dc368b);
+        
+    
+        var popup_cd9d7e71b160d20600c8c573d1ca0837 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1563587bc6ef195d26b028822fec5254 = $(`<div id="html_1563587bc6ef195d26b028822fec5254" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>160 Van Cortlandt Park South</h4>     <img src="images/160VanCortlandtParkSouth_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Van Cortlandt Village</p>     <p style="font-weight: 700;">160 Van Cortlandt Park South</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">160 Van Cortlandt Avenue is a new residential complex that will bring 340 apartments to the Kingsbridge area. The building will be 100% affordable and have Community Board 8 resident prioritized for 50% of its units. Among its amenities are both indoor and outdoor recreational space, green rooftop terrace, and protected parking lot. The project, built on the site of the former Chuch of the Visitation School, will come online alongside a new 736-seat elementary school, bringing much needed educational support to the local area.</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 13</p> </div> </div>`)[0];
+                popup_cd9d7e71b160d20600c8c573d1ca0837.setContent(html_1563587bc6ef195d26b028822fec5254);
+            
+        
+
+        marker_8281d715e80fd8b19419af344d32949f.bindPopup(popup_cd9d7e71b160d20600c8c573d1ca0837)
+        ;
+
+        
+    
+    
+            marker_8281d715e80fd8b19419af344d32949f.bindTooltip(
+                `<div>
+                     160 Van Cortlandt Park South
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b59e8c76b863f1816e2a40f854e0548d = L.marker(
+                [40.84852647, -73.91214755],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_14341e1f97cc8e90bcd9452cee2f5fc8 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            14\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_b59e8c76b863f1816e2a40f854e0548d.setIcon(div_icon_14341e1f97cc8e90bcd9452cee2f5fc8);
+        
+    
+        var popup_5d51b60d5e5489bc29ef88e56a27826f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c94c5f5f79b989207b724072a338b81b = $(`<div id="html_c94c5f5f79b989207b724072a338b81b" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>1769 Jerome Ave</h4>     <img src="images/1769JeromeAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Morris Heights</p>     <p style="font-weight: 700;">1769 Jerome Ave</p>     <p style="font-weight: 700;">Mixed-use</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 14</p> </div> </div>`)[0];
+                popup_5d51b60d5e5489bc29ef88e56a27826f.setContent(html_c94c5f5f79b989207b724072a338b81b);
+            
+        
+
+        marker_b59e8c76b863f1816e2a40f854e0548d.bindPopup(popup_5d51b60d5e5489bc29ef88e56a27826f)
+        ;
+
+        
+    
+    
+            marker_b59e8c76b863f1816e2a40f854e0548d.bindTooltip(
+                `<div>
+                     1769 Jerome Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8a36de72babbb5c5a934ac13d11194d2 = L.marker(
+                [40.83889904, -73.88428768],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_ad32ef38fa97ad2b7c61a505edf1a062 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            15\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_8a36de72babbb5c5a934ac13d11194d2.setIcon(div_icon_ad32ef38fa97ad2b7c61a505edf1a062);
+        
+    
+        var popup_1adcb51df19f7367218a8f371923162f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_454a5f156534c13b9bdf7aa5d4b6ec51 = $(`<div id="html_454a5f156534c13b9bdf7aa5d4b6ec51" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>1848 Vyse Ave</h4>     <img src="images/1848VyseAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">1848 Vyse Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Permits Filed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 15</p> </div> </div>`)[0];
+                popup_1adcb51df19f7367218a8f371923162f.setContent(html_454a5f156534c13b9bdf7aa5d4b6ec51);
+            
+        
+
+        marker_8a36de72babbb5c5a934ac13d11194d2.bindPopup(popup_1adcb51df19f7367218a8f371923162f)
+        ;
+
+        
+    
+    
+            marker_8a36de72babbb5c5a934ac13d11194d2.bindTooltip(
+                `<div>
+                     1848 Vyse Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_726fa5eb54a8bc4be350d305a45ca249 = L.marker(
+                [40.81432385, -73.92975371],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_f625b319216840595fa7f617a62424e6 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            16\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_726fa5eb54a8bc4be350d305a45ca249.setIcon(div_icon_f625b319216840595fa7f617a62424e6);
+        
+    
+        var popup_5e7713f28d8f37ec71947fb8bfda51c6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f2816a989e16888154a986e9b1c54216 = $(`<div id="html_f2816a989e16888154a986e9b1c54216" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>261-315 Grand Concourse</h4>     <img src="images/261-315GrandConcourse_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Lower Concourse</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Under Construction</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">Beitel Group has secured financing to proceed with the development of two 14-story buildings that will bring 405 new units to the Lower Concourse area. The project is expected to complete in late 2025.   As of September 2024,  the site is currently undergoing site remedial construction. </p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 16</p> </div> </div>`)[0];
+                popup_5e7713f28d8f37ec71947fb8bfda51c6.setContent(html_f2816a989e16888154a986e9b1c54216);
+            
+        
+
+        marker_726fa5eb54a8bc4be350d305a45ca249.bindPopup(popup_5e7713f28d8f37ec71947fb8bfda51c6)
+        ;
+
+        
+    
+    
+            marker_726fa5eb54a8bc4be350d305a45ca249.bindTooltip(
+                `<div>
+                     261-315 Grand Concourse
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f5ddb54e2d96d3bf9e90669957613cd9 = L.marker(
+                [40.8138231, -73.92916965],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_7d3e0c65680bf7938cb854e85589cb75 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            17\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_f5ddb54e2d96d3bf9e90669957613cd9.setIcon(div_icon_7d3e0c65680bf7938cb854e85589cb75);
+        
+    
+        var popup_98527cb1367f864203b59425c37e8ead = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7db73103013ebcd0d8a5db4901949db5 = $(`<div id="html_7db73103013ebcd0d8a5db4901949db5" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>276 Grand Concourse</h4>     <img src="images/276GrandConcourse_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Lower Concourse</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">276 Grand Concourse brings 215 apartments to the Lower Concourse area. Among its amenites are a resident cafe, library, business lounge, and much more. 60% of its units are set affordable through the Affordable New York program. </p>     <p style="font-weight: 700;">Learn more: <a href="https://276gc.com/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 17</p> </div> </div>`)[0];
+                popup_98527cb1367f864203b59425c37e8ead.setContent(html_7db73103013ebcd0d8a5db4901949db5);
+            
+        
+
+        marker_f5ddb54e2d96d3bf9e90669957613cd9.bindPopup(popup_98527cb1367f864203b59425c37e8ead)
+        ;
+
+        
+    
+    
+            marker_f5ddb54e2d96d3bf9e90669957613cd9.bindTooltip(
+                `<div>
+                     276 Grand Concourse
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_75141c533cf4b1bd5e617ee6de2dbe18 = L.marker(
+                [40.82464353, -73.91827534],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_d912418cc6b9fbc4b784d8b063b2726f = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            18\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_75141c533cf4b1bd5e617ee6de2dbe18.setIcon(div_icon_d912418cc6b9fbc4b784d8b063b2726f);
+        
+    
+        var popup_f886bb8b110199b5e9d40df7554a77a9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_970bb06fad7fb597ae3af1db35ad60ba = $(`<div id="html_970bb06fad7fb597ae3af1db35ad60ba" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>280 East 161 St</h4>     <img src="images/280East161St_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Concourse Village</p>     <p style="font-weight: 700;">280 East 161 St</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Permits Filed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 18</p> </div> </div>`)[0];
+                popup_f886bb8b110199b5e9d40df7554a77a9.setContent(html_970bb06fad7fb597ae3af1db35ad60ba);
+            
+        
+
+        marker_75141c533cf4b1bd5e617ee6de2dbe18.bindPopup(popup_f886bb8b110199b5e9d40df7554a77a9)
+        ;
+
+        
+    
+    
+            marker_75141c533cf4b1bd5e617ee6de2dbe18.bindTooltip(
+                `<div>
+                     280 East 161 St
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b56300c057d867174473bb9aa72c775f = L.marker(
+                [40.86650148, -73.88427125],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_6fc7b6c0366233a0ae533193fc7ce872 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            19\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_b56300c057d867174473bb9aa72c775f.setIcon(div_icon_6fc7b6c0366233a0ae533193fc7ce872);
+        
+    
+        var popup_b56e3e32cc642c0f4f94906f65e66384 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_98d55f22666c284317db1dbce2a1a6b3 = $(`<div id="html_98d55f22666c284317db1dbce2a1a6b3" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>2850 Webster Ave</h4>     <img src="images/2850WebsterAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Jerome Park</p>     <p style="font-weight: 700;">2850 Webster Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 19</p> </div> </div>`)[0];
+                popup_b56e3e32cc642c0f4f94906f65e66384.setContent(html_98d55f22666c284317db1dbce2a1a6b3);
+            
+        
+
+        marker_b56300c057d867174473bb9aa72c775f.bindPopup(popup_b56e3e32cc642c0f4f94906f65e66384)
+        ;
+
+        
+    
+    
+            marker_b56300c057d867174473bb9aa72c775f.bindTooltip(
+                `<div>
+                     2850 Webster Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_af2582840c37b8b5b7c563a334af8c32 = L.marker(
+                [40.87303391, -73.88772863],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_60172735093d6a6a4c8d4ed3f4b8c5f7 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            20\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_af2582840c37b8b5b7c563a334af8c32.setIcon(div_icon_60172735093d6a6a4c8d4ed3f4b8c5f7);
+        
+    
+        var popup_754b409b7a9163e5dccbc8c12f741866 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6cf9167e254a03ce1ddd32d4f5cda68c = $(`<div id="html_6cf9167e254a03ce1ddd32d4f5cda68c" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>3001 Grand Concourse</h4>     <img src="images/3001GrandConcourse_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Bedford Park</p>     <p style="font-weight: 700;">3001 Grand Concourse</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 20</p> </div> </div>`)[0];
+                popup_754b409b7a9163e5dccbc8c12f741866.setContent(html_6cf9167e254a03ce1ddd32d4f5cda68c);
+            
+        
+
+        marker_af2582840c37b8b5b7c563a334af8c32.bindPopup(popup_754b409b7a9163e5dccbc8c12f741866)
+        ;
+
+        
+    
+    
+            marker_af2582840c37b8b5b7c563a334af8c32.bindTooltip(
+                `<div>
+                     3001 Grand Concourse
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3475d7e9e6bfc338a272066244f768b2 = L.marker(
+                [40.87021203, -73.87916144],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_9e7638d3efbcef31e31206ee8b50198b = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            21\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_3475d7e9e6bfc338a272066244f768b2.setIcon(div_icon_9e7638d3efbcef31e31206ee8b50198b);
+        
+    
+        var popup_d74202cbf8ba04d52e339452ee3c4e8f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_efb93abf6c26fd91980eebfd37a03817 = $(`<div id="html_efb93abf6c26fd91980eebfd37a03817" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>3041 Webster Ave</h4>     <img src="images/3041WebsterAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Norwood</p>     <p style="font-weight: 700;">3041 Webster Ave</p>     <p style="font-weight: 700;">Mixed-use</p>     <p style="font-weight: 700;">Permits Filed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 21</p> </div> </div>`)[0];
+                popup_d74202cbf8ba04d52e339452ee3c4e8f.setContent(html_efb93abf6c26fd91980eebfd37a03817);
+            
+        
+
+        marker_3475d7e9e6bfc338a272066244f768b2.bindPopup(popup_d74202cbf8ba04d52e339452ee3c4e8f)
+        ;
+
+        
+    
+    
+            marker_3475d7e9e6bfc338a272066244f768b2.bindTooltip(
+                `<div>
+                     3041 Webster Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b0c382b749df404b0d8feedd9a7dfd15 = L.marker(
+                [40.87411108, -73.88502569],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_d29383330097bd3f00595f5f32ba245a = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            22\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_b0c382b749df404b0d8feedd9a7dfd15.setIcon(div_icon_d29383330097bd3f00595f5f32ba245a);
+        
+    
+        var popup_b4bbd1a55262b83abb0cec24ed9c0770 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5c2bd30df340c098edcd5127e6f45b95 = $(`<div id="html_5c2bd30df340c098edcd5127e6f45b95" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>3059 Valentine Ave</h4>     <img src="images/3059ValentineAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Bedford Park</p>     <p style="font-weight: 700;">3059 Valentine Ave</p>     <p style="font-weight: 700;">Mixed-use</p>     <p style="font-weight: 700;">Under Construction</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 22</p> </div> </div>`)[0];
+                popup_b4bbd1a55262b83abb0cec24ed9c0770.setContent(html_5c2bd30df340c098edcd5127e6f45b95);
+            
+        
+
+        marker_b0c382b749df404b0d8feedd9a7dfd15.bindPopup(popup_b4bbd1a55262b83abb0cec24ed9c0770)
+        ;
+
+        
+    
+    
+            marker_b0c382b749df404b0d8feedd9a7dfd15.bindTooltip(
+                `<div>
+                     3059 Valentine Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_02a252dc16b55213d8a3aa1777a3e5c1 = L.marker(
+                [40.87129734, -73.87606961],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_4e86aaa3ebab26be7ec74d7b20b1c9a2 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            23\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_02a252dc16b55213d8a3aa1777a3e5c1.setIcon(div_icon_4e86aaa3ebab26be7ec74d7b20b1c9a2);
+        
+    
+        var popup_a924060a6dd1223e21205c1440716c87 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a175469ad36f4796ed3ecc40b3a66917 = $(`<div id="html_a175469ad36f4796ed3ecc40b3a66917" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>3118 Webster Ave</h4>     <img src="images/3118WebsterAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Norwood</p>     <p style="font-weight: 700;">3118 Webster Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Under Construction</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 23</p> </div> </div>`)[0];
+                popup_a924060a6dd1223e21205c1440716c87.setContent(html_a175469ad36f4796ed3ecc40b3a66917);
+            
+        
+
+        marker_02a252dc16b55213d8a3aa1777a3e5c1.bindPopup(popup_a924060a6dd1223e21205c1440716c87)
+        ;
+
+        
+    
+    
+            marker_02a252dc16b55213d8a3aa1777a3e5c1.bindTooltip(
+                `<div>
+                     3118 Webster Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6831782ac887878de8c45486955b9ef1 = L.marker(
+                [40.81461201, -73.92857597],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_b6f509832ad78828f301fe51969b4080 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            24\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_6831782ac887878de8c45486955b9ef1.setIcon(div_icon_b6f509832ad78828f301fe51969b4080);
+        
+    
+        var popup_948ea411aa05d396736c6664dcad527d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e2b4db9a577153232406ad36d4bd9bfa = $(`<div id="html_e2b4db9a577153232406ad36d4bd9bfa" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>322 Grand Concourse</h4>     <img src="images/322GrandConcourse_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Lower Concourse</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">322 Grand Concourse is a new residential complex in the Lower Concourse area bringing over 150 apartments to the neighborhood. Among its amenities are pet services, a rooftop lounge, a gym, and much more. 25 units were set affordable for low and middle income earners through the Affordable New York program. 322 Grand Concourse is one of the many buildings displaying the enormous residential and economic growth of the Lower Concourse area over the last 10 years.</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 24</p> </div> </div>`)[0];
+                popup_948ea411aa05d396736c6664dcad527d.setContent(html_e2b4db9a577153232406ad36d4bd9bfa);
+            
+        
+
+        marker_6831782ac887878de8c45486955b9ef1.bindPopup(popup_948ea411aa05d396736c6664dcad527d)
+        ;
+
+        
+    
+    
+            marker_6831782ac887878de8c45486955b9ef1.bindTooltip(
+                `<div>
+                     322 Grand Concourse
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_368b7f3a7f58ce2e14014df01d7c0417 = L.marker(
+                [40.8169718, -73.93125472],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_d6f78474051f2493eb097d40413161a2 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            25\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_368b7f3a7f58ce2e14014df01d7c0417.setIcon(div_icon_d6f78474051f2493eb097d40413161a2);
+        
+    
+        var popup_0643979d8453e28d0fe259c70e2f0cd4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_290519d873456f72d8513833c17dd4dd = $(`<div id="html_290519d873456f72d8513833c17dd4dd" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>355 Exterior St</h4>     <img src="images/355ExteriorSt_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Lower Concourse</p>     <p style="font-weight: 700;">355 Exterior St</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Under Construction</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">355 Exterior is an upcoming residential development that will bring an incredible 751 residential units to the Lower Concourse neighborhood. 355 Exterior St is set to the become the second-tallest building in the Bronx, and the tallest in the South Bronx at 43 stories. It will re-envision the Harlem River waterfront for many years to come.  After a five-year delay, 355 Exterior began construction in January 2025.  </p>     <p style="font-weight: 700;">Learn more: <a href="https://hillwest.com/project/355-exterior-street/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 25</p> </div> </div>`)[0];
+                popup_0643979d8453e28d0fe259c70e2f0cd4.setContent(html_290519d873456f72d8513833c17dd4dd);
+            
+        
+
+        marker_368b7f3a7f58ce2e14014df01d7c0417.bindPopup(popup_0643979d8453e28d0fe259c70e2f0cd4)
+        ;
+
+        
+    
+    
+            marker_368b7f3a7f58ce2e14014df01d7c0417.bindTooltip(
+                `<div>
+                     355 Exterior St
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bbc6e91b2f53075126895f62a9921e13 = L.marker(
+                [40.80678108, -73.92802644],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_1020e234f1861c4341919eff6f9e450e = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            26\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_bbc6e91b2f53075126895f62a9921e13.setIcon(div_icon_1020e234f1861c4341919eff6f9e450e);
+        
+    
+        var popup_131ef9ae021b58ca0156cc91b37adf40 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_26f9c9e46d738b0440c5b1394e3ef3ca = $(`<div id="html_26f9c9e46d738b0440c5b1394e3ef3ca" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>36 Bruckner Blvd</h4>     <img src="images/36BrucknerBlvd_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Mott Haven</p>     <p style="font-weight: 700;">36 Bruckner Blvd</p>     <p style="font-weight: 700;">Mixed-use</p>     <p style="font-weight: 700;">Under Construction</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 26</p> </div> </div>`)[0];
+                popup_131ef9ae021b58ca0156cc91b37adf40.setContent(html_26f9c9e46d738b0440c5b1394e3ef3ca);
+            
+        
+
+        marker_bbc6e91b2f53075126895f62a9921e13.bindPopup(popup_131ef9ae021b58ca0156cc91b37adf40)
+        ;
+
+        
+    
+    
+            marker_bbc6e91b2f53075126895f62a9921e13.bindTooltip(
+                `<div>
+                     36 Bruckner Blvd
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c2c2b55c7a34a7c01c28138f6785f1a6 = L.marker(
+                [40.83665549, -73.90482245],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_3edeeb1e5180f5b5e7580a56972a06ac = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            27\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_c2c2b55c7a34a7c01c28138f6785f1a6.setIcon(div_icon_3edeeb1e5180f5b5e7580a56972a06ac);
+        
+    
+        var popup_2f2494bdbc8cf1340d59033bac261b71 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ab71a34b94bd4a5f9568713c834816aa = $(`<div id="html_ab71a34b94bd4a5f9568713c834816aa" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>3728 Park Ave</h4>     <img src="images/3728ParkAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Claremont</p>     <p style="font-weight: 700;">3728 Park Ave</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Permits Filed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 27</p> </div> </div>`)[0];
+                popup_2f2494bdbc8cf1340d59033bac261b71.setContent(html_ab71a34b94bd4a5f9568713c834816aa);
+            
+        
+
+        marker_c2c2b55c7a34a7c01c28138f6785f1a6.bindPopup(popup_2f2494bdbc8cf1340d59033bac261b71)
+        ;
+
+        
+    
+    
+            marker_c2c2b55c7a34a7c01c28138f6785f1a6.bindTooltip(
+                `<div>
+                     3728 Park Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2909fbd618d7503ead7a8822bdc17b44 = L.marker(
+                [40.82236222, -73.91430458],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_bffdc8661eddb78a908eb577fd7bc8fe = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            28\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_2909fbd618d7503ead7a8822bdc17b44.setIcon(div_icon_bffdc8661eddb78a908eb577fd7bc8fe);
+        
+    
+        var popup_747ebc02cc358830a50df539f0c41d2d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bc1f2611f6c2a39504e0be73ce1fe225 = $(`<div id="html_bc1f2611f6c2a39504e0be73ce1fe225" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>409 East 158 St</h4>     <img src="images/409East158St_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Melrose</p>     <p style="font-weight: 700;">409 East 158th Street</p>     <p style="font-weight: 700;">Mixed-use</p>     <p style="font-weight: 700;">Under Construction</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 28</p> </div> </div>`)[0];
+                popup_747ebc02cc358830a50df539f0c41d2d.setContent(html_bc1f2611f6c2a39504e0be73ce1fe225);
+            
+        
+
+        marker_2909fbd618d7503ead7a8822bdc17b44.bindPopup(popup_747ebc02cc358830a50df539f0c41d2d)
+        ;
+
+        
+    
+    
+            marker_2909fbd618d7503ead7a8822bdc17b44.bindTooltip(
+                `<div>
+                     409 East 158 St
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d1d780995dbd6c8deec76c6dc842c9ad = L.marker(
+                [40.81697404, -73.92857723],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_720621490a0025d11c64a896a8be84d0 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            29\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_d1d780995dbd6c8deec76c6dc842c9ad.setIcon(div_icon_720621490a0025d11c64a896a8be84d0);
+        
+    
+        var popup_a2b3fb35b846708e6c10ae2e441ba4ba = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ef3e16e66dd1ee879a5c14d9d258e8d6 = $(`<div id="html_ef3e16e66dd1ee879a5c14d9d258e8d6" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>425 Grand Concourse</h4>     <img src="images/425GrandConcourse_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Lower Concourse</p>     <p style="font-weight: 700;">425 Grand Concourse</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">425 Grand Concourse is a new mixed-use development that will 277 residential units to the Lower Concourse area.  Among its amenties are a recreation, landscaped rooftop terrace, fitness center, and much more. 425 Grand Concourse is the largest Passive House construction in the United States, offering an airtight, temperature-controlling, and emissions-reducing design. Residents of 425 Grand Concourse should expect lower monthly utility bills due to its sustainable architecture.</p>     <p style="font-weight: 700;">Learn more: <a href="https://www.425grandconcourse.com/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 29</p> </div> </div>`)[0];
+                popup_a2b3fb35b846708e6c10ae2e441ba4ba.setContent(html_ef3e16e66dd1ee879a5c14d9d258e8d6);
+            
+        
+
+        marker_d1d780995dbd6c8deec76c6dc842c9ad.bindPopup(popup_a2b3fb35b846708e6c10ae2e441ba4ba)
+        ;
+
+        
+    
+    
+            marker_d1d780995dbd6c8deec76c6dc842c9ad.bindTooltip(
+                `<div>
+                     425 Grand Concourse
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2d344fd6d1f6055e46850fb156f84b4d = L.marker(
+                [40.82739428, -73.90958579],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_be38689297e10b4836169e1e0fd39524 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            30\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_2d344fd6d1f6055e46850fb156f84b4d.setIcon(div_icon_be38689297e10b4836169e1e0fd39524);
+        
+    
+        var popup_8e8d85f68e9e1612d0b9bf8d0a0a85e2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cf715618b4a7d378cddd0e8b18532bc1 = $(`<div id="html_cf715618b4a7d378cddd0e8b18532bc1" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>443 East 165 St</h4>     <img src="images/443East165St_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Morrisania</p>     <p style="font-weight: 700;">443 East 165 St</p>     <p style="font-weight: 700;">Mixed-use</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 30</p> </div> </div>`)[0];
+                popup_8e8d85f68e9e1612d0b9bf8d0a0a85e2.setContent(html_cf715618b4a7d378cddd0e8b18532bc1);
+            
+        
+
+        marker_2d344fd6d1f6055e46850fb156f84b4d.bindPopup(popup_8e8d85f68e9e1612d0b9bf8d0a0a85e2)
+        ;
+
+        
+    
+    
+            marker_2d344fd6d1f6055e46850fb156f84b4d.bindTooltip(
+                `<div>
+                     443 East 165 St
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_14da857b90836c16eaa4af4c165e0fb4 = L.marker(
+                [40.81798047, -73.9300818],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_7ac2a6860c8635c42ef123b63eb25e84 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            31\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_14da857b90836c16eaa4af4c165e0fb4.setIcon(div_icon_7ac2a6860c8635c42ef123b63eb25e84);
+        
+    
+        var popup_a4af00f7d6978a158004d7340523730f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e3cd13568b80b5f6c2331eedfeb7f417 = $(`<div id="html_e3cd13568b80b5f6c2331eedfeb7f417" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>477 Gerard Ave</h4>     <img src="images/477GerardAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Lower Concourse</p>     <p style="font-weight: 700;">477 Gerard Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 31</p> </div> </div>`)[0];
+                popup_a4af00f7d6978a158004d7340523730f.setContent(html_e3cd13568b80b5f6c2331eedfeb7f417);
+            
+        
+
+        marker_14da857b90836c16eaa4af4c165e0fb4.bindPopup(popup_a4af00f7d6978a158004d7340523730f)
+        ;
+
+        
+    
+    
+            marker_14da857b90836c16eaa4af4c165e0fb4.bindTooltip(
+                `<div>
+                     477 Gerard Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d14ca2b6fd738cc94ddf662363b1574f = L.marker(
+                [40.82053837, -73.92843189],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_89384b076716ef27405274e9017dbd8a = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            32\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_d14ca2b6fd738cc94ddf662363b1574f.setIcon(div_icon_89384b076716ef27405274e9017dbd8a);
+        
+    
+        var popup_2c498c2f2c365658dc10f994b71c1edb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_11b0cf6ba1db02b852766214cd65c114 = $(`<div id="html_11b0cf6ba1db02b852766214cd65c114" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>586 Gerard Ave</h4>     <img src="images/586GerardAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Lower Concourse</p>     <p style="font-weight: 700;">586 Gerard Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 32</p> </div> </div>`)[0];
+                popup_2c498c2f2c365658dc10f994b71c1edb.setContent(html_11b0cf6ba1db02b852766214cd65c114);
+            
+        
+
+        marker_d14ca2b6fd738cc94ddf662363b1574f.bindPopup(popup_2c498c2f2c365658dc10f994b71c1edb)
+        ;
+
+        
+    
+    
+            marker_d14ca2b6fd738cc94ddf662363b1574f.bindTooltip(
+                `<div>
+                     586 Gerard Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3b6f10a56fb8ee392eaeb872b90b4552 = L.marker(
+                [40.8157624, -73.90570742],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_0f2d70b1ee6e518a5b58a6755ad9898e = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            33\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_3b6f10a56fb8ee392eaeb872b90b4552.setIcon(div_icon_0f2d70b1ee6e518a5b58a6755ad9898e);
+        
+    
+        var popup_fb700db8821da42dc87dcf7b5e8cc269 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_be8fb492396d751e8d00f2fb168640ca = $(`<div id="html_be8fb492396d751e8d00f2fb168640ca" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>671 Tinton Ave</h4>     <img src="images/671TintonAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Woodstock</p>     <p style="font-weight: 700;">671 Tinton Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 33</p> </div> </div>`)[0];
+                popup_fb700db8821da42dc87dcf7b5e8cc269.setContent(html_be8fb492396d751e8d00f2fb168640ca);
+            
+        
+
+        marker_3b6f10a56fb8ee392eaeb872b90b4552.bindPopup(popup_fb700db8821da42dc87dcf7b5e8cc269)
+        ;
+
+        
+    
+    
+            marker_3b6f10a56fb8ee392eaeb872b90b4552.bindTooltip(
+                `<div>
+                     671 Tinton Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_265f847c7feec38047384b651f023d75 = L.marker(
+                [40.80813653, -73.93135269],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_51b41916c17a4ac96607809041828d71 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            34\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_265f847c7feec38047384b651f023d75.setIcon(div_icon_51b41916c17a4ac96607809041828d71);
+        
+    
+        var popup_83df4ea34eaa5c761286e5d6cc3eaf20 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7d2dbf0588ebc58b65a9e4273d722502 = $(`<div id="html_7d2dbf0588ebc58b65a9e4273d722502" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Bankside</h4>     <img src="images/Bankside_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Mott Haven</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Mixed-use</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">The Bankside developments come with nearly 1,350 new rental units, over 34,000 square foot of public waterfront space, and 15,000 square feet of new retail space. Amenities include resident storage, a mail room, a pool, a laundry room, and EV charging stations. 30% of Bankside’s apartments are deemed affordable (rent-stabilized) for middle income earners through the Affordable New York program. Third at Bankside became move-in ready in 2022. Lincoln at Bankside followed upon its phase’s completion. </p>     <p style="font-weight: 700;">Learn more: <a href="https://rent.brookfieldproperties.com/location/new-york/bankside-collection/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 34</p> </div> </div>`)[0];
+                popup_83df4ea34eaa5c761286e5d6cc3eaf20.setContent(html_7d2dbf0588ebc58b65a9e4273d722502);
+            
+        
+
+        marker_265f847c7feec38047384b651f023d75.bindPopup(popup_83df4ea34eaa5c761286e5d6cc3eaf20)
+        ;
+
+        
+    
+    
+            marker_265f847c7feec38047384b651f023d75.bindTooltip(
+                `<div>
+                     Bankside
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1a27cee4091924f9f03d248b7c853f0e = L.marker(
+                [40.87156402, -73.89159391],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_9ffde241caf67bcb53c3b005f0aece07 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            35\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_1a27cee4091924f9f03d248b7c853f0e.setIcon(div_icon_9ffde241caf67bcb53c3b005f0aece07);
+        
+    
+        var popup_fef4fb87d7cdd37c449244ce506a84b4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e048906f2b6c669901d8c610bda86170 = $(`<div id="html_e048906f2b6c669901d8c610bda86170" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Bedford Green House</h4>     <img src="images/BedfordGreenHouse_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">2880 Jerome Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 35</p> </div> </div>`)[0];
+                popup_fef4fb87d7cdd37c449244ce506a84b4.setContent(html_e048906f2b6c669901d8c610bda86170);
+            
+        
+
+        marker_1a27cee4091924f9f03d248b7c853f0e.bindPopup(popup_fef4fb87d7cdd37c449244ce506a84b4)
+        ;
+
+        
+    
+    
+            marker_1a27cee4091924f9f03d248b7c853f0e.bindTooltip(
+                `<div>
+                     Bedford Green House
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b02d23e52638408fe8d8c86f71f7b95 = L.marker(
+                [40.84387696, -73.89308946],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_c37fbdfa66ecc0a461229bdba17a3879 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            36\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_5b02d23e52638408fe8d8c86f71f7b95.setIcon(div_icon_c37fbdfa66ecc0a461229bdba17a3879);
+        
+    
+        var popup_fbe819728f42134fe0734e11df5f1b5a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7c40152c0cd0ac361f52fdb34603f0bc = $(`<div id="html_7c40152c0cd0ac361f52fdb34603f0bc" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Belmont Cove</h4>     <img src="images/BelmontCove_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Tremont</p>     <p style="font-weight: 700;">656 East 176 St</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 36</p> </div> </div>`)[0];
+                popup_fbe819728f42134fe0734e11df5f1b5a.setContent(html_7c40152c0cd0ac361f52fdb34603f0bc);
+            
+        
+
+        marker_5b02d23e52638408fe8d8c86f71f7b95.bindPopup(popup_fbe819728f42134fe0734e11df5f1b5a)
+        ;
+
+        
+    
+    
+            marker_5b02d23e52638408fe8d8c86f71f7b95.bindTooltip(
+                `<div>
+                     Belmont Cove
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6968ac997895a3b1883f4131df6940d2 = L.marker(
+                [40.81895359, -73.92653242],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_960efa6c3a03d2bde37372b35d205892 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            37\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_6968ac997895a3b1883f4131df6940d2.setIcon(div_icon_960efa6c3a03d2bde37372b35d205892);
+        
+    
+        var popup_858209d4660a83fd019eba31cd37ec19 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e58b32631930f115b75b10ddae2cc3f5 = $(`<div id="html_e58b32631930f115b75b10ddae2cc3f5" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Bronx General Post Office</h4>     <img src="images/BronxGeneralPostOffice_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Lower Concourse</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Commercial</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">As of 2024, the Bronx General Post Office has again been put for sale by owner Young Woo & Associates. The New York City landmark, constructed in 1937 as part of the New Deal,  houses four operable floors, murals by artists Ben and Bernarda Bryson Shahn, and Zona de Cuba, a Cuban restaurant on the building’s rooftop terrace. After $40 million of investment into its redevelopment, Young Woo & Associates are asking for $70 million to purchase and finish renovations of the post office. At the corner of the Grand Concourse and E 149 St, the Bronx General Post Office is prime commercial real estate in a booming neighborhood thats seen some of the most residential construction in New York City over the last 10 years. </p>     <p style="font-weight: 700;">Learn more: <a href="https://livingnewdeal.org/sites/bronx-central-post-office-bronx-ny/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 37</p> </div> </div>`)[0];
+                popup_858209d4660a83fd019eba31cd37ec19.setContent(html_e58b32631930f115b75b10ddae2cc3f5);
+            
+        
+
+        marker_6968ac997895a3b1883f4131df6940d2.bindPopup(popup_858209d4660a83fd019eba31cd37ec19)
+        ;
+
+        
+    
+    
+            marker_6968ac997895a3b1883f4131df6940d2.bindTooltip(
+                `<div>
+                     Bronx General Post Office
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c59504294994b5c34fc7ee6b4c27f2c7 = L.marker(
+                [40.87302559, -73.88419332],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_6af24d2e01135e93cb565a6ef652f1d2 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            38\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_c59504294994b5c34fc7ee6b4c27f2c7.setIcon(div_icon_6af24d2e01135e93cb565a6ef652f1d2);
+        
+    
+        var popup_f94ec4a12aed9b2f1a2dab8d8a4e2d2b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_712c71d361ffad2ef5c0c58a4a6c23cc = $(`<div id="html_712c71d361ffad2ef5c0c58a4a6c23cc" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Bronx Grove</h4>     <img src="images/BronxGrove_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Bedford Park</p>     <p style="font-weight: 700;">261 East 202nd St</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 38</p> </div> </div>`)[0];
+                popup_f94ec4a12aed9b2f1a2dab8d8a4e2d2b.setContent(html_712c71d361ffad2ef5c0c58a4a6c23cc);
+            
+        
+
+        marker_c59504294994b5c34fc7ee6b4c27f2c7.bindPopup(popup_f94ec4a12aed9b2f1a2dab8d8a4e2d2b)
+        ;
+
+        
+    
+    
+            marker_c59504294994b5c34fc7ee6b4c27f2c7.bindTooltip(
+                `<div>
+                     Bronx Grove
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_595bd4807698d3860c1504c22b66d9de = L.marker(
+                [40.82448675, -73.9111484],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_7300a58632fb332a139d025bd17809f3 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            39\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_595bd4807698d3860c1504c22b66d9de.setIcon(div_icon_7300a58632fb332a139d025bd17809f3);
+        
+    
+        var popup_02de83d74b266e418cc5c1b599196665 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a275b1cf631013bbab9cb55c4bc1fa31 = $(`<div id="html_a275b1cf631013bbab9cb55c4bc1fa31" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Bronx Music Hall</h4>     <img src="images/BronxMusicHall_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Morrisania</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Commercial</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">The Bronx Music Hall is a brand new performance venue and community cultural center dedicated to honoring, showcasing, and cultivating music, dance, and theater in the Bronx. The Bronx Music Hall features a 250-person theater, outdoor ampitheater and plaza, grand lobby and exhibit hall, and rehearsal rooms and classrooms </p>     <p style="font-weight: 700;">Learn more: <a href="https://www.bronxmusichall.org/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 39</p> </div> </div>`)[0];
+                popup_02de83d74b266e418cc5c1b599196665.setContent(html_a275b1cf631013bbab9cb55c4bc1fa31);
+            
+        
+
+        marker_595bd4807698d3860c1504c22b66d9de.bindPopup(popup_02de83d74b266e418cc5c1b599196665)
+        ;
+
+        
+    
+    
+            marker_595bd4807698d3860c1504c22b66d9de.bindTooltip(
+                `<div>
+                     Bronx Music Hall
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_03bea12cfd0e4e6f48fd1905e17beac5 = L.marker(
+                [40.82017435, -73.93139797],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_e79ff2faa1a3a8caf1de5b6c43ea3638 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            40\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_03bea12cfd0e4e6f48fd1905e17beac5.setIcon(div_icon_e79ff2faa1a3a8caf1de5b6c43ea3638);
+        
+    
+        var popup_34dca39caa84a74998be77da90e4ec32 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b457f10312d12a86e70025fde6fb5b5c = $(`<div id="html_b457f10312d12a86e70025fde6fb5b5c" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Bronx Point</h4>     <img src="images/BronxPoint_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Lower Concourse</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Mixed-use</p>     <p style="font-weight: 700;">Under Construction</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">Bronx Point is a mixed-use development home to over a thousand new rental units, public park space, and essential community culture centers beside the 145th Street Bridge along the Harlem River Waterfront. Approximately 540 of these units are reserved permanently affordable for low income earners. Bronx Point is home to the Hip Hop Museum, celebrating the Bronx and the rich culture and history of hip hop. Mill Pond Park offers sorely-needed waterfront access to residents and other community members. BronxWork will administer an early childhood education center and provide social services to formerly homeless households upon the construction of their housing. The Billion Oyster Project, seeking to restore one billion oysters to New York Harbor’s waterways, hosts restoration site at Bronx point.</p>     <p style="font-weight: 700;">Learn more: <a href="https://bronxpoint.nyc/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 40</p> </div> </div>`)[0];
+                popup_34dca39caa84a74998be77da90e4ec32.setContent(html_b457f10312d12a86e70025fde6fb5b5c);
+            
+        
+
+        marker_03bea12cfd0e4e6f48fd1905e17beac5.bindPopup(popup_34dca39caa84a74998be77da90e4ec32)
+        ;
+
+        
+    
+    
+            marker_03bea12cfd0e4e6f48fd1905e17beac5.bindTooltip(
+                `<div>
+                     Bronx Point
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_35971b560ef6a1ef25351d4621bb1a46 = L.marker(
+                [40.82437012, -73.8578032],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_58ae9c2db2cacf43ec705fcca17e7a03 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            41\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_35971b560ef6a1ef25351d4621bb1a46.setIcon(div_icon_58ae9c2db2cacf43ec705fcca17e7a03);
+        
+    
+        var popup_4899337476f4dc6be4d3ed0b124557a8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_58e3c0292c7a9b9cdfe3e58fcbbe1857 = $(`<div id="html_58e3c0292c7a9b9cdfe3e58fcbbe1857" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Bruckner Commons</h4>     <img src="images/BrucknerCommons_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Castle Hill</p>     <p style="font-weight: 700;">1948-1998 Bruckner Blvd</p>     <p style="font-weight: 700;">Commercial</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">Bruckner Commons coalesces Urban Edge Properties commericial holdings along White Plains Rd and within their adjacent outdoor shopping center. Major existing tenants include a new Aldi’s, Five Below, Lot Less, and Shop Rite, with a BJ’s Wholesale Club and Buffalo Wild Wings soon-to-follow in the coming years.  Bruckner Commons has cemented itself as an essential commercial artery for the Castle Hill and Soundview neighborhoods in the South Bronx. </p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 41</p> </div> </div>`)[0];
+                popup_4899337476f4dc6be4d3ed0b124557a8.setContent(html_58e3c0292c7a9b9cdfe3e58fcbbe1857);
+            
+        
+
+        marker_35971b560ef6a1ef25351d4621bb1a46.bindPopup(popup_4899337476f4dc6be4d3ed0b124557a8)
+        ;
+
+        
+    
+    
+            marker_35971b560ef6a1ef25351d4621bb1a46.bindTooltip(
+                `<div>
+                     Bruckner Commons
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2a8d37815a9e03c3cf2c9215c2556621 = L.marker(
+                [40.80635018, -73.92729416],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_2ae1c4d2b6064dde8c6a554640766d89 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            42\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_2a8d37815a9e03c3cf2c9215c2556621.setIcon(div_icon_2ae1c4d2b6064dde8c6a554640766d89);
+        
+    
+        var popup_ad120cb3f56db840a1190a12b90c6443 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9c24c95ee59fa237cf13460edc5e663c = $(`<div id="html_9c24c95ee59fa237cf13460edc5e663c" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Bruckner House</h4>     <img src="images/BrucknerHouse_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Mott Haven</p>     <p style="font-weight: 700;">40 Bruckner Blvd</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">The Bruckner House is a new 12-story residential building in Mott Haven, bringing 365 new apartments to the area. 110 of these are reserved for affordable housing. Among its amenities are a garden, rooftop lounge, theatre, and much more.</p>     <p style="font-weight: 700;">Learn more: <a href="https://brucknerhouse.com/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 42</p> </div> </div>`)[0];
+                popup_ad120cb3f56db840a1190a12b90c6443.setContent(html_9c24c95ee59fa237cf13460edc5e663c);
+            
+        
+
+        marker_2a8d37815a9e03c3cf2c9215c2556621.bindPopup(popup_ad120cb3f56db840a1190a12b90c6443)
+        ;
+
+        
+    
+    
+            marker_2a8d37815a9e03c3cf2c9215c2556621.bindTooltip(
+                `<div>
+                     Bruckner House
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f599eb17fa7119c07be174b5ac045812 = L.marker(
+                [40.8277275, -73.86376483],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_5e3b2302929a0dbec68c3f2efd57a40d = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            43\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_f599eb17fa7119c07be174b5ac045812.setIcon(div_icon_5e3b2302929a0dbec68c3f2efd57a40d);
+        
+    
+        var popup_876d1909259a5155ea689a14d3514f4a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_05810471d13d91404d34b096b5a768ee = $(`<div id="html_05810471d13d91404d34b096b5a768ee" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Casa Celina</h4>     <img src="images/CasaCelina_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Soundview</p>     <p style="font-weight: 700;">1001 Thieriot Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 43</p> </div> </div>`)[0];
+                popup_876d1909259a5155ea689a14d3514f4a.setContent(html_05810471d13d91404d34b096b5a768ee);
+            
+        
+
+        marker_f599eb17fa7119c07be174b5ac045812.bindPopup(popup_876d1909259a5155ea689a14d3514f4a)
+        ;
+
+        
+    
+    
+            marker_f599eb17fa7119c07be174b5ac045812.bindTooltip(
+                `<div>
+                     Casa Celina
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4f23b61515556d3c877376078f4cea61 = L.marker(
+                [40.81835578, -73.91522927],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_b234699a02c44b9a8137042ae3afbfb7 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            44\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_4f23b61515556d3c877376078f4cea61.setIcon(div_icon_b234699a02c44b9a8137042ae3afbfb7);
+        
+    
+        var popup_4defde8efff84bbb5afd5d8bcb46db4a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_14e0665c798efef6a6982ee473dc7d9c = $(`<div id="html_14e0665c798efef6a6982ee473dc7d9c" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Earl Monroe New Renaissance Basketball School</h4>     <img src="images/EarlMonroeNewRenaissanceBasketballSchool_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Melrose</p>     <p style="font-weight: 700;">647 Elton Ave</p>     <p style="font-weight: 700;">Educational</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 44</p> </div> </div>`)[0];
+                popup_4defde8efff84bbb5afd5d8bcb46db4a.setContent(html_14e0665c798efef6a6982ee473dc7d9c);
+            
+        
+
+        marker_4f23b61515556d3c877376078f4cea61.bindPopup(popup_4defde8efff84bbb5afd5d8bcb46db4a)
+        ;
+
+        
+    
+    
+            marker_4f23b61515556d3c877376078f4cea61.bindTooltip(
+                `<div>
+                     Earl Monroe New Renaissance Basketball School
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7d8340c35537d6a6cc14cb93b1998fb1 = L.marker(
+                [40.8173646, -73.92990141],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_358f9edad2bcfa6c600d951745c974f9 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            45\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_7d8340c35537d6a6cc14cb93b1998fb1.setIcon(div_icon_358f9edad2bcfa6c600d951745c974f9);
+        
+    
+        var popup_f38d186f7cbb6f56fc3711eea0731204 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_525f71217d2f30176cd4b59cd4cab1c8 = $(`<div id="html_525f71217d2f30176cd4b59cd4cab1c8" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Estela</h4>     <img src="images/Estela_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Lower Concourse</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Mixed-use</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">Estela is a two-building mixed-use development offering 554 apartments in close proximity to the Harlem River waterfront. Among the amenities are indoor and outdoor lounges, a co-working space, multiple fitness and yoga rooms, and locally-painted artwork placed thorughtout the buildings. 164 units were set affordable for low and middle income earners through the Affordable New York program. Estela is also home to the Mott Haven Marketplace, an organic market and gourmet deli. </p>     <p style="font-weight: 700;">Learn more: <a href="https://estelabronx.com/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 45</p> </div> </div>`)[0];
+                popup_f38d186f7cbb6f56fc3711eea0731204.setContent(html_525f71217d2f30176cd4b59cd4cab1c8);
+            
+        
+
+        marker_7d8340c35537d6a6cc14cb93b1998fb1.bindPopup(popup_f38d186f7cbb6f56fc3711eea0731204)
+        ;
+
+        
+    
+    
+            marker_7d8340c35537d6a6cc14cb93b1998fb1.bindTooltip(
+                `<div>
+                     Estela
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_29ebd879e50bef2b67f62ca34938f14f = L.marker(
+                [40.84291318, -73.92574662],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_9ae2786792456913f47600de3475b4ad = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            46\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_29ebd879e50bef2b67f62ca34938f14f.setIcon(div_icon_9ae2786792456913f47600de3475b4ad);
+        
+    
+        var popup_6c1bea959d56a790138bb6ed9f7aec68 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_915837acd2f327d7c634ec553390cae0 = $(`<div id="html_915837acd2f327d7c634ec553390cae0" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Highbridge at 1387 University Ave</h4>     <img src="images/Highbridgeat1387UniversityAve_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Highbridge</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Under Construction</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">Highbridge at 1387 University is an upcoming residential consturction that will bring over 400 units of affordable, transitional, supportive housing to the Highbridge neighborhood. At 31 stories tall, Highbridge will also provide much needed greenspace and walkspaces to the local area. Samaritan Daytop Village are also aiming to receive Passive House certification for the development. Once complete, Highbridge will certify itself as a local landmark for its community importance and location on a former Carmelite monastery mere feet from the famous High Bridge.</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 46</p> </div> </div>`)[0];
+                popup_6c1bea959d56a790138bb6ed9f7aec68.setContent(html_915837acd2f327d7c634ec553390cae0);
+            
+        
+
+        marker_29ebd879e50bef2b67f62ca34938f14f.bindPopup(popup_6c1bea959d56a790138bb6ed9f7aec68)
+        ;
+
+        
+    
+    
+            marker_29ebd879e50bef2b67f62ca34938f14f.bindTooltip(
+                `<div>
+                     Highbridge at 1387 University Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cc8f6af80faf84b7d14d2e003ad857a0 = L.marker(
+                [40.84942981, -73.84039285],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_a490655d5adf8293e8ed85641016c4d2 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            47\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_cc8f6af80faf84b7d14d2e003ad857a0.setIcon(div_icon_a490655d5adf8293e8ed85641016c4d2);
+        
+    
+        var popup_266ec2483206e7ad7e5fdd43fefa2eb8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b9012e2591b8769062323fd8a31a3374 = $(`<div id="html_b9012e2591b8769062323fd8a31a3374" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Hutchinson Metro Center South Campus</h4>     <img src="images/HutchinsonMetroCenterSouthCampus_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Morris Park</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Commercial</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">Simone Development Companies is expanding their presence in the East Bronx with the Hutchinson Metro Center (HMC) South Campus expansion. Upon completion, their campus will total 3 million square feet of commercial and green space for hospitality, retail, and dining industries. The coming Morris Park  Metro-North station and pedestrian improvements will cement HMC as regional work hub for years to come.</p>     <p style="font-weight: 700;">Learn more: <a href="https://nancyjkelley.com/case/simone/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 47</p> </div> </div>`)[0];
+                popup_266ec2483206e7ad7e5fdd43fefa2eb8.setContent(html_b9012e2591b8769062323fd8a31a3374);
+            
+        
+
+        marker_cc8f6af80faf84b7d14d2e003ad857a0.bindPopup(popup_266ec2483206e7ad7e5fdd43fefa2eb8)
+        ;
+
+        
+    
+    
+            marker_cc8f6af80faf84b7d14d2e003ad857a0.bindTooltip(
+                `<div>
+                     Hutchinson Metro Center South Campus
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b5ce7473aaa34c6d80d54777b9639fdc = L.marker(
+                [40.81217897, -73.92966056],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_0a03949ad51f3819825f6fe5669dfdeb = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            48\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_b5ce7473aaa34c6d80d54777b9639fdc.setIcon(div_icon_0a03949ad51f3819825f6fe5669dfdeb);
+        
+    
+        var popup_990f8e0d3a2f21a3c714cd44d98c09ed = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_86299eb9a5b13fa1ee4550c3c66cf0fb = $(`<div id="html_86299eb9a5b13fa1ee4550c3c66cf0fb" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>KIPP NYC Charter School</h4>     <img src="images/KIPPNYCCharterSchool_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Mott Haven</p>     <p style="font-weight: 700;">75 Canal St West</p>     <p style="font-weight: 700;">Educational</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 48</p> </div> </div>`)[0];
+                popup_990f8e0d3a2f21a3c714cd44d98c09ed.setContent(html_86299eb9a5b13fa1ee4550c3c66cf0fb);
+            
+        
+
+        marker_b5ce7473aaa34c6d80d54777b9639fdc.bindPopup(popup_990f8e0d3a2f21a3c714cd44d98c09ed)
+        ;
+
+        
+    
+    
+            marker_b5ce7473aaa34c6d80d54777b9639fdc.bindTooltip(
+                `<div>
+                     KIPP NYC Charter School
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a77fb6f1ec220d7fdd7b10f13fe8a65b = L.marker(
+                [40.86856754, -73.89830978],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_a290591e0f667786dcfb2ba63c9519fb = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            49\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_a77fb6f1ec220d7fdd7b10f13fe8a65b.setIcon(div_icon_a290591e0f667786dcfb2ba63c9519fb);
+        
+    
+        var popup_abf6525c9ec8691542890a28b3b0b18b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ddc8e2c08d677356beede0bc4a0f3e31 = $(`<div id="html_ddc8e2c08d677356beede0bc4a0f3e31" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Kingsbridge Armory</h4>     <img src="images/KingsbridgeArmory_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Kingsbridge Heights</p>     <p style="font-weight: 700;">29 West Kingsbridge Rd</p>     <p style="font-weight: 700;">Commercial</p>     <p style="font-weight: 700;">On Hold</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">The Kingsbridge Armory is a landmark, former-military structure in Kingsbridge that has been a cornerstore for Bronx redevelopment for the last few decades. The armory, now vacant, comprises an 180,000-square-foot column-free drill hall with 120-foot ceilings as well as five garage units at the rear of the building for additional storage. It is the largest space of its kind in New York City.  On January 7, 2025, Gov. Kathy Hochul, Rep. Adriano Espaillat, Mayor Eric Adams, and NYCEDC CEO Andrew Kimball announced the the winning RFP for the Kingsbridge Armory site: El Centro Kingsbridge. This winning proposal will transform the armory into a venue hosting </p>     <p style="font-weight: 700;">Learn more: <a href="https://edc.nyc/project/kingsbridge-armory" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 49</p> </div> </div>`)[0];
+                popup_abf6525c9ec8691542890a28b3b0b18b.setContent(html_ddc8e2c08d677356beede0bc4a0f3e31);
+            
+        
+
+        marker_a77fb6f1ec220d7fdd7b10f13fe8a65b.bindPopup(popup_abf6525c9ec8691542890a28b3b0b18b)
+        ;
+
+        
+    
+    
+            marker_a77fb6f1ec220d7fdd7b10f13fe8a65b.bindTooltip(
+                `<div>
+                     Kingsbridge Armory
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1e184226114d413475a27ff46c75766b = L.marker(
+                [40.82323374, -73.92993136],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_fcc7be121def9bcdb847341cb4bb96a2 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            50\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_1e184226114d413475a27ff46c75766b.setIcon(div_icon_fcc7be121def9bcdb847341cb4bb96a2);
+        
+    
+        var popup_5722abd15f154cc8673ede6a59de9ad1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_92c9dc9cd3eac0a2ffd8655cd0604981 = $(`<div id="html_92c9dc9cd3eac0a2ffd8655cd0604981" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>LiDL at Bronx Terminal Market</h4>     <img src="images/LiDLatBronxTerminalMarket_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Lower Concourse</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Commercial</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">On Wednesday Oct 23, 2024, Lidl will open their first Bronx location in the Bronx Terminal Market on 700 Exterior St.  This comes as part of Lidl’s concerted effort to expand into the Northeast corridor. LIDL’s expansion into the Bronx signals a demand for fresh, organic supermarkets and will create around 48 new jobs that offer healthcare and other benefits to LIDL employees.</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 50</p> </div> </div>`)[0];
+                popup_5722abd15f154cc8673ede6a59de9ad1.setContent(html_92c9dc9cd3eac0a2ffd8655cd0604981);
+            
+        
+
+        marker_1e184226114d413475a27ff46c75766b.bindPopup(popup_5722abd15f154cc8673ede6a59de9ad1)
+        ;
+
+        
+    
+    
+            marker_1e184226114d413475a27ff46c75766b.bindTooltip(
+                `<div>
+                     LiDL at Bronx Terminal Market
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d758488647008a37aa2517b10a760266 = L.marker(
+                [40.80888418, -73.93159094],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_e2f7f0f6c52a959c30a15508114ef0f1 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            51\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_d758488647008a37aa2517b10a760266.setIcon(div_icon_e2f7f0f6c52a959c30a15508114ef0f1);
+        
+    
+        var popup_a4b95bef5030cac07929e29479a9a5cd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_24084ac86cf4b99d3980fe17100be30e = $(`<div id="html_24084ac86cf4b99d3980fe17100be30e" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Maven</h4>     <img src="images/Maven_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Mott Haven</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Mixed-use</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">Maven is a mixed-use residential tower development offering 200 rental units along the Harlem River waterfront. Among the amenities available to residents are a fitness center, a game room, electric vehicle charging stations, large-scale art installations, and much more. 60 units were reserved as affordable for middle income households through the Affordable New York program.</p>     <p style="font-weight: 700;">Learn more: <a href="https://mavenbx.com/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 51</p> </div> </div>`)[0];
+                popup_a4b95bef5030cac07929e29479a9a5cd.setContent(html_24084ac86cf4b99d3980fe17100be30e);
+            
+        
+
+        marker_d758488647008a37aa2517b10a760266.bindPopup(popup_a4b95bef5030cac07929e29479a9a5cd)
+        ;
+
+        
+    
+    
+            marker_d758488647008a37aa2517b10a760266.bindTooltip(
+                `<div>
+                     Maven
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c94818174aadb9ff05d0944d31c06bc6 = L.marker(
+                [40.86160981, -73.91455254],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_b9d56ca5d98488cb5a78e6cdb6a0ecfd = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            52\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_c94818174aadb9ff05d0944d31c06bc6.setIcon(div_icon_b9d56ca5d98488cb5a78e6cdb6a0ecfd);
+        
+    
+        var popup_d3dffa71a2851fc032e0880527d672d0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d7d1f95e4e73979cf36aac841f121821 = $(`<div id="html_d7d1f95e4e73979cf36aac841f121821" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>One Fordham Landing</h4>     <img src="images/OneFordhamLanding_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Univserity Heights</p>     <p style="font-weight: 700;">320 West Fordham Rd</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">On Hold</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 52</p> </div> </div>`)[0];
+                popup_d3dffa71a2851fc032e0880527d672d0.setContent(html_d7d1f95e4e73979cf36aac841f121821);
+            
+        
+
+        marker_c94818174aadb9ff05d0944d31c06bc6.bindPopup(popup_d3dffa71a2851fc032e0880527d672d0)
+        ;
+
+        
+    
+    
+            marker_c94818174aadb9ff05d0944d31c06bc6.bindTooltip(
+                `<div>
+                     One Fordham Landing
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_db9a19aede7d0517703ba95a240c2351 = L.marker(
+                [40.80350477, -73.92055217],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_4072e4f5ff89131e2318ee78738814d6 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            53\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_db9a19aede7d0517703ba95a240c2351.setIcon(div_icon_4072e4f5ff89131e2318ee78738814d6);
+        
+    
+        var popup_f02a25d3975a35160ea7b8931071ea9d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b6489e25e58a57bb2e61790b1b8d44ac = $(`<div id="html_b6489e25e58a57bb2e61790b1b8d44ac" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>One38</h4>     <img src="images/One38_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Mott Haven</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">ONE38 is a new residential development that  will bring around 579 studio, one-bedroom, and  2-bedroom apartments to Mott Haven. 131 of these apartments guaranteed affordable for propsective renters. Its amenities will include a tennis court, indoor gaming rooms, indoor pool, rooftop terrace, and much, much more. </p>     <p style="font-weight: 700;">Learn more: <a href="https://liveone38.com/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 53</p> </div> </div>`)[0];
+                popup_f02a25d3975a35160ea7b8931071ea9d.setContent(html_b6489e25e58a57bb2e61790b1b8d44ac);
+            
+        
+
+        marker_db9a19aede7d0517703ba95a240c2351.bindPopup(popup_f02a25d3975a35160ea7b8931071ea9d)
+        ;
+
+        
+    
+    
+            marker_db9a19aede7d0517703ba95a240c2351.bindTooltip(
+                `<div>
+                     One38
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_de4833087223c8f8d8d95eec575f1bf8 = L.marker(
+                [40.82263096, -73.85769252],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_2a80401f5d912844ff02e006834c0d66 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            54\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_de4833087223c8f8d8d95eec575f1bf8.setIcon(div_icon_2a80401f5d912844ff02e006834c0d66);
+        
+    
+        var popup_db5a4b52969628a0e4ac6e1da17b515e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1d5bba43b238767a16b37cef8f606515 = $(`<div id="html_1d5bba43b238767a16b37cef8f606515" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Park Lane Senior Apartments</h4>     <img src="images/ParkLaneSeniorApartments_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Castle Hill</p>     <p style="font-weight: 700;">1940 Turnbull Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 54</p> </div> </div>`)[0];
+                popup_db5a4b52969628a0e4ac6e1da17b515e.setContent(html_1d5bba43b238767a16b37cef8f606515);
+            
+        
+
+        marker_de4833087223c8f8d8d95eec575f1bf8.bindPopup(popup_db5a4b52969628a0e4ac6e1da17b515e)
+        ;
+
+        
+    
+    
+            marker_de4833087223c8f8d8d95eec575f1bf8.bindTooltip(
+                `<div>
+                     Park Lane Senior Apartments
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_080c54631985bf2939bfa1ef84ca0d0a = L.marker(
+                [40.83470904, -73.92232824],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_efa651137fcc7bbbc2687c2e074802a3 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            55\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_080c54631985bf2939bfa1ef84ca0d0a.setIcon(div_icon_efa651137fcc7bbbc2687c2e074802a3);
+        
+    
+        var popup_edaba3068163189977376e95b0d8b5ae = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b0cd197d08b347b2cf49ef7d4811da77 = $(`<div id="html_b0cd197d08b347b2cf49ef7d4811da77" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>River Avenue</h4>     <img src="images/RiverAvenue_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Concourse</p>     <p style="font-weight: 700;">1159 River Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 55</p> </div> </div>`)[0];
+                popup_edaba3068163189977376e95b0d8b5ae.setContent(html_b0cd197d08b347b2cf49ef7d4811da77);
+            
+        
+
+        marker_080c54631985bf2939bfa1ef84ca0d0a.bindPopup(popup_edaba3068163189977376e95b0d8b5ae)
+        ;
+
+        
+    
+    
+            marker_080c54631985bf2939bfa1ef84ca0d0a.bindTooltip(
+                `<div>
+                     River Avenue
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b18f35243b25929fcac5de38a328476c = L.marker(
+                [40.84596334, -73.91652045],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_6cdfad497efcab6f9e7116b4de92eaca = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            56\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_b18f35243b25929fcac5de38a328476c.setIcon(div_icon_6cdfad497efcab6f9e7116b4de92eaca);
+        
+    
+        var popup_05cda4d0c46beff10e3d932872a7879c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bb65ba62ac745137fefd0bffc2397895 = $(`<div id="html_bb65ba62ac745137fefd0bffc2397895" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Starhill</h4>     <img src="images/Starhill_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Morris Heights</p>     <p style="font-weight: 700;">1600 Grand Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Under Construction</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 56</p> </div> </div>`)[0];
+                popup_05cda4d0c46beff10e3d932872a7879c.setContent(html_bb65ba62ac745137fefd0bffc2397895);
+            
+        
+
+        marker_b18f35243b25929fcac5de38a328476c.bindPopup(popup_05cda4d0c46beff10e3d932872a7879c)
+        ;
+
+        
+    
+    
+            marker_b18f35243b25929fcac5de38a328476c.bindTooltip(
+                `<div>
+                     Starhill
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_906d0bde5c080d7f01d5d40d7ccd606a = L.marker(
+                [40.82060653, -73.86016778],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_363ec159d877c1711d861de9be4cc1a6 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            57\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_906d0bde5c080d7f01d5d40d7ccd606a.setIcon(div_icon_363ec159d877c1711d861de9be4cc1a6);
+        
+    
+        var popup_fbb4ba1754943e19d87be892d185b162 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2004591a97c8a90cba240754dbc8c200 = $(`<div id="html_2004591a97c8a90cba240754dbc8c200" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Stevenson Square</h4>     <img src="images/StevensonSquare_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Soundview</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Under Construction</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">Stevenson Square is an upcoming multi-stage residential complex from Camber Property Group. The project will offer both affordable multi-family rentals and co-ops, adding nearly 1,000 new units to the Soundview area. Included in the project is access to childcare facilities, Pre-K opportunities, a new tennis court, and access to all facilites administered through the already-existing Steveson Commons. Stevenson Square will also construct a pedestrian roadway on Leland Avenue, connecting residents between Lafayette Avenue and Seward Avenue. At $1 billion in total investment, Stevenson Square will provide much needed affordable housing and neighborhood facilites into the community.</p>     <p style="font-weight: 700;">Learn more: <a href="https://stevensonsquare.info/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 57</p> </div> </div>`)[0];
+                popup_fbb4ba1754943e19d87be892d185b162.setContent(html_2004591a97c8a90cba240754dbc8c200);
+            
+        
+
+        marker_906d0bde5c080d7f01d5d40d7ccd606a.bindPopup(popup_fbb4ba1754943e19d87be892d185b162)
+        ;
+
+        
+    
+    
+            marker_906d0bde5c080d7f01d5d40d7ccd606a.bindTooltip(
+                `<div>
+                     Stevenson Square
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_63f054380d597dbbeef97ab4c625e1ed = L.marker(
+                [40.82077897, -73.92904417],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_c294560344b945762bdf1bcaf2232a3a = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            58\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_63f054380d597dbbeef97ab4c625e1ed.setIcon(div_icon_c294560344b945762bdf1bcaf2232a3a);
+        
+    
+        var popup_0e322a8bb0780df3805a131cd2d22192 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8f52e8e1285e6ae0252b2771906ae546 = $(`<div id="html_8f52e8e1285e6ae0252b2771906ae546" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>Success Academy</h4>     <img src="images/SuccessAcademy_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">586 River Avenue</p>     <p style="font-weight: 700;">Educational</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 58</p> </div> </div>`)[0];
+                popup_0e322a8bb0780df3805a131cd2d22192.setContent(html_8f52e8e1285e6ae0252b2771906ae546);
+            
+        
+
+        marker_63f054380d597dbbeef97ab4c625e1ed.bindPopup(popup_0e322a8bb0780df3805a131cd2d22192)
+        ;
+
+        
+    
+    
+            marker_63f054380d597dbbeef97ab4c625e1ed.bindTooltip(
+                `<div>
+                     Success Academy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_342c790738fe94f06e1e1191185d6bc0 = L.marker(
+                [40.85945317, -73.89072013],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_018c2378dc5e2b98569a3d632ed67186 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            59\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_342c790738fe94f06e1e1191185d6bc0.setIcon(div_icon_018c2378dc5e2b98569a3d632ed67186);
+        
+    
+        var popup_d683eb0f8b94c3f4660a5103f7f15f99 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_96921e3fb586b040676f0aa5a47c5ef2 = $(`<div id="html_96921e3fb586b040676f0aa5a47c5ef2" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>The Arabella</h4>     <img src="images/TheArabella_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Belmont</p>     <p style="font-weight: 700;">4720 Third Ave</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 59</p> </div> </div>`)[0];
+                popup_d683eb0f8b94c3f4660a5103f7f15f99.setContent(html_96921e3fb586b040676f0aa5a47c5ef2);
+            
+        
+
+        marker_342c790738fe94f06e1e1191185d6bc0.bindPopup(popup_d683eb0f8b94c3f4660a5103f7f15f99)
+        ;
+
+        
+    
+    
+            marker_342c790738fe94f06e1e1191185d6bc0.bindTooltip(
+                `<div>
+                     The Arabella
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ea58233fb502f95d337e4ee5c4b44261 = L.marker(
+                [40.81044172, -73.93110706],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_a4e77d5bb54ade658c62eb0d9526aef3 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            60\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_ea58233fb502f95d337e4ee5c4b44261.setIcon(div_icon_a4e77d5bb54ade658c62eb0d9526aef3);
+        
+    
+        var popup_b72e16665d9d89d5e0b34a73ee83ed81 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5a8f215c493df591caa2490c3f8f623c = $(`<div id="html_5a8f215c493df591caa2490c3f8f623c" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>The Arches</h4>     <img src="images/TheArches_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Mott Haven</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">The Arches is a mixed income residential development offering 430 luxury one and two bedroom rental units in close proximity to the Harlem River waterfront. Among the amenities available to residents are 24-hour doorman service, a movie theater, a yoga studio, and much more. 60 units were set affordable for middle income earners through the Affordable New York program.</p>     <p style="font-weight: 700;">Learn more: <a href="https://thearches.com/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 60</p> </div> </div>`)[0];
+                popup_b72e16665d9d89d5e0b34a73ee83ed81.setContent(html_5a8f215c493df591caa2490c3f8f623c);
+            
+        
+
+        marker_ea58233fb502f95d337e4ee5c4b44261.bindPopup(popup_b72e16665d9d89d5e0b34a73ee83ed81)
+        ;
+
+        
+    
+    
+            marker_ea58233fb502f95d337e4ee5c4b44261.bindTooltip(
+                `<div>
+                     The Arches
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_01bba8f0b399692608d482a83827383c = L.marker(
+                [40.8095699, -73.93010339],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_aff43ff70c70387b5999de03000ccd59 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            61\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_01bba8f0b399692608d482a83827383c.setIcon(div_icon_aff43ff70c70387b5999de03000ccd59);
+        
+    
+        var popup_f2f99d34b18bd173baa2aa8428f8e00d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_48489e736f520de0bae5653ff57e2b8f = $(`<div id="html_48489e736f520de0bae5653ff57e2b8f" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>The Motto</h4>     <img src="images/TheMotto_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Mott Haven</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">Completed</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">The Motto a mixed use residential development offering 624 luxury rental units  in close proximity to the Harlem River waterfront. Among the amenities available to residents are a game room, a co-working space, a resident fitness center, and much more. 80 units were set affordable for middle income earners through the Affordable New York program.</p>     <p style="font-weight: 700;">Learn more: <a href="https://themottobx.com/" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 61</p> </div> </div>`)[0];
+                popup_f2f99d34b18bd173baa2aa8428f8e00d.setContent(html_48489e736f520de0bae5653ff57e2b8f);
+            
+        
+
+        marker_01bba8f0b399692608d482a83827383c.bindPopup(popup_f2f99d34b18bd173baa2aa8428f8e00d)
+        ;
+
+        
+    
+    
+            marker_01bba8f0b399692608d482a83827383c.bindTooltip(
+                `<div>
+                     The Motto
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dfbbee67ff3fbd736163e6f662f3bfe9 = L.marker(
+                [40.81454328, -73.8903346],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_34dfc53774dbfa5ed88337b960eebd03 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            62\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_dfbbee67ff3fbd736163e6f662f3bfe9.setIcon(div_icon_34dfc53774dbfa5ed88337b960eebd03);
+        
+    
+        var popup_6cd858beea5bc5694bf0199c68d5293b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_93b078889fbc42c254b0aecc553f65fd = $(`<div id="html_93b078889fbc42c254b0aecc553f65fd" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>The Peninsula</h4>     <img src="images/ThePeninsula_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Hunts Points</p>     <p style="font-weight: 700;">1221 Spofford Ave</p>     <p style="font-weight: 700;">Mixed-use</p>     <p style="font-weight: 700;">Under Construction</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 62</p> </div> </div>`)[0];
+                popup_6cd858beea5bc5694bf0199c68d5293b.setContent(html_93b078889fbc42c254b0aecc553f65fd);
+            
+        
+
+        marker_dfbbee67ff3fbd736163e6f662f3bfe9.bindPopup(popup_6cd858beea5bc5694bf0199c68d5293b)
+        ;
+
+        
+    
+    
+            marker_dfbbee67ff3fbd736163e6f662f3bfe9.bindTooltip(
+                `<div>
+                     The Peninsula
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_88575998375510019b148d740260a1ff = L.marker(
+                [40.90061308, -73.85298152],
+                {}
+            ).addTo(map_e12e5c3c6eec7a39413bea7ef3749ed9);
+        
+    
+            var div_icon_60120389c460e07731e19f348a995581 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 30px; height: 30px; background-color: lightblue;\n    border-radius: 50%; padding: 5px; border: 2px solid blue;\n    display: flex; justify-content: center; align-items: center;\"\u003e\n        \u003cimg src=\u0027images/GoogleAptIcon.png\u0027 style=\"width: 20px; height: 20px;\"/\u003e  \n        \u003cdiv style=\"position: absolute; bottom: -1.5px; font-size: 7px; color: blue; font-weight: bold;\"\u003e\n            63\n        \u003c/div\u003e\n    \u003c/div\u003e\n"});
+            marker_88575998375510019b148d740260a1ff.setIcon(div_icon_60120389c460e07731e19f348a995581);
+        
+    
+        var popup_c9c63b74fe1939b937776966938338a0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c026b9f4428e773b21ac7927cf490831 = $(`<div id="html_c026b9f4428e773b21ac7927cf490831" style="width: 100.0%; height: 100.0%;"> <div style="font-family: 'Fira Code', monospace; border: 2px solid black; padding: 7px; border-radius: 5px; background-color: white;">     <style>         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');         h4 {             font-family: 'Fira Code', monospace;             font-weight: 700;             color: #17365d; /* Hex color for heading */             text-transform: uppercase;         }         p {             color: #17365d; /* Hex color for paragraph text */         }         a {             color: #0066cc; /* Hex color for links */             text-decoration: none;         }         a:hover {             text-decoration: underline;         }     </style>     <h4>The Plains</h4>     <img src="images/ThePlains_Img.jpg" alt="Building Image" style="width: 200px; height: auto;" />     <p style="font-weight: 700;">Wakefield</p>     <p style="font-weight: 700;">4519 White Plains Rd</p>     <p style="font-weight: 700;">Residential</p>     <p style="font-weight: 700;">None</p>     <p style="font-weight: 700;">About: </p>     <p style="font-weight: 400;">None</p>     <p style="font-weight: 700;">Learn more: <a href="None" target="_blank">Click here</a></p>     <p style="font-weight: 700;">Page No: 63</p> </div> </div>`)[0];
+                popup_c9c63b74fe1939b937776966938338a0.setContent(html_c026b9f4428e773b21ac7927cf490831);
+            
+        
+
+        marker_88575998375510019b148d740260a1ff.bindPopup(popup_c9c63b74fe1939b937776966938338a0)
+        ;
+
+        
+    
+    
+            marker_88575998375510019b148d740260a1ff.bindTooltip(
+                `<div>
+                     The Plains
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
