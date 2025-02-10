@@ -1,9 +1,0 @@
-numpy
-pathlib
-pandas
-geopandas
-shapely
-mapclassify
-flask
-folium
-leafmap
