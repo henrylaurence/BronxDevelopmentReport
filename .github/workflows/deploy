@@ -19,7 +19,7 @@ jobs:
           pip install -r requirements.txt # Create a requirements.txt with your dependencies
           pip install geopandas folium flask
       - name: Generate map
-        run: python your_script_name.py  # Replace your_script_name.py (This should generate map.html in static folder)
+        run: app.py  # Replace your_script_name.py (This should generate map.html in static folder)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v2
         with:
